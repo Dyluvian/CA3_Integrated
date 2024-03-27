@@ -27,4 +27,9 @@ public abstract class Staff implements User {
         this.role = role;
     }
     
+    @Override
+    public int getUserID() {
+        return userID;
+    }
+    
 }
