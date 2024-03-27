@@ -42,4 +42,9 @@ public abstract class Staff implements User {
         return username;
     }
     
+    @Override
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    
 }
