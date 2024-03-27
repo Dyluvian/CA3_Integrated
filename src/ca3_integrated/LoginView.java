@@ -1,13 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
 package ca3_integrated;
 
-/**
- *
- * @author User
- */
 public interface LoginView {
-    
+
+    void displayLoginPrompt(); // Run the method to display the login prompt.
+
+    String getUserInput();
+
+    String getPasswordInput();
 }
