@@ -161,4 +161,8 @@ public class AdminController {
                         }
                     }
                     break;
+// TO LOG OUT
+                case 5:
+                    logout();
+                    return;
             }
