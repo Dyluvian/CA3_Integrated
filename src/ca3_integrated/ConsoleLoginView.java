@@ -30,3 +30,10 @@ public class ConsoleLoginView implements LoginView {
     public String getUserInput() {
         return scanner.nextLine();
     }
+    
+    @Override
+    public String getPasswordInput() {
+        System.out.print("---\nNow, please input your password.\n---\n");
+        return scanner.nextLine();
+    }
+}
