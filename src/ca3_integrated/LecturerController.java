@@ -69,3 +69,7 @@ public class LecturerController implements UserController {
                     }
                     userDatabase.updateUser(activeLecturer.getUserID(), activeLecturer);
                     break;
+// TO LOG OUT
+                case 3: // if the user inputs 3...
+                    logout(); // ...run the logout method
+                    return;
