@@ -39,3 +39,33 @@ public class LecturerController implements UserController {
             System.out.println("---\nInput 1 to do nothing for now.\nInput 2 to change your username and password.\nInput 3 to log out.\nInput 4 to close the software.\n---");
             choice = scanner.nextInt();
             switch (choice) {
+// TO GENERATE A LECTURER REPORT, I'LL GET BACK TO YOU
+
+// TO CHANGE YOUR USERNAME AND PASSWORD
+                case 2:
+                    int activeLecturerID = lecturer.getUserID();
+                    User activeLecturer = userDatabase.getUser(activeLecturerID);
+                    System.out.println("---\nAcknowledged.\nInput 1 to modify your username.\nInput 2 to modify your password.");
+                    System.out.println("---");
+                    int choiceCredentials = scanner.nextInt();
+                    switch (choiceCredentials) {
+                        case 1:
+                            System.out.println("---\nNow, please input the new username you would like to change over to.\n---");
+                            String newUsername = scanner.next();
+                            if (userDatabase.usernameExists(newUsername)) {
+                                System.out.println("---\nSuperlative! Your username has been updated. Renewals within renewals.");
+                                break;
+                            }
+                            activeLecturer.setUsername(newUsername);
+                            System.out.println("---\nYour username has been updated successfully.\n---");
+                            break;
+                        case 2:
+                            System.out.println("---\nNow, please input your new password.\n---");
+                            activeLecturer.setPassword(scanner.next());
+                            System.out.println("---\nSplendid! Your password has been changed. Go forth and feel secure!");
+                            break;
+                        default:
+                            System.out.println("---\nNonsense! That is not valid input. You must choose either your username (1), or password (2).");
+                    }
+                    userDatabase.updateUser(activeLecturer.getUserID(), activeLecturer);
+                    break;
