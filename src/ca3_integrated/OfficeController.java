@@ -121,4 +121,32 @@ public class OfficeController implements UserController {
         UserController controller = new ConsoleUserController(new ConsoleLoginView(), userDatabase);
         controller.login();
     }
+
+    private void generateCourseReport(String format) {
+        CourseReport courseReport = new CourseReport(getFormatter(format));
+        courseReport.generateReport(format);
+    }
+
+    private void generateLecturerReport(String format) {
+        LecturerReport lecturerReport = new LecturerReport(getFormatter(format));
+        lecturerReport.generateReport(format);
+    }
+
+    private void generateStudentReport(String format) {
+        StudentReport studentReport = new StudentReport(getFormatter(format));
+        studentReport.generateReport(format);
+    }
+
+    private ReportFormatter getFormatter(String format) {
+        switch (format) {
+            case "csv":
+                return new CSVReportFormatter();
+            case "txt":
+                return new TextReportFormatter();
+            case "console":
+//                TBD
+            default:
+                throw new IllegalArgumentException("BAD FORMAT!: " + format);
+        }
+    }
 }
