@@ -32,4 +32,9 @@ public abstract class Staff implements User {
         return userID;
     }
     
+    @Override
+    public void decrementUserID() {
+        userID--;
+    }
+    
 }
