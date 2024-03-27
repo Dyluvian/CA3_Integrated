@@ -19,4 +19,6 @@ public interface User {
     
     void setUsername(String username);
     
+    String getPassword();
+    
 }
