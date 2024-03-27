@@ -1,3 +1,5 @@
+package ca3_integrated;
+
 /*
 // Dylan Geraghty - CA3 (Integrated CA) - Programming: Object-Oriented Approach
 // ------------------
@@ -9,8 +11,12 @@
 // ------------------
 */
 
-package ca3_integrated;
+import java.util.Scanner;
 
-public class ConsoleLoginView {
-    
-}
+public class ConsoleLoginView implements LoginView {
+
+    private Scanner scanner;
+
+    public ConsoleLoginView() {
+        scanner = new Scanner(System.in);
+    }
