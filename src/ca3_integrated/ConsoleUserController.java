@@ -23,6 +23,23 @@ public class ConsoleUserController implements UserController {
 
 
 
+
+@Override
+public void showMenu(User user) {
+    if (user instanceof Admin) {
+        AdminController adminController = new AdminController(userDatabase);
+        adminController.showMenu((Admin) user);
+    } else if (user instanceof Office) {
+        OfficeController officeController = new OfficeController(userDatabase);
+        officeController.showMenu((Office) user);
+    } else if (user instanceof Lecturer) {
+        LecturerController lecturerController = new LecturerController(userDatabase);
+        lecturerController.showMenu((Lecturer) user);
+    } else {
+        System.out.println("???????????????????");
+    }
+}
+
     @Override
     public void logout() {
         System.out.println("INSERT LOGOUT TEXT");
