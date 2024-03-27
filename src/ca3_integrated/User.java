@@ -14,5 +14,7 @@ package ca3_integrated;
 public interface User {
     
     int getUserID();
+
+    String getUsername();
     
 }
