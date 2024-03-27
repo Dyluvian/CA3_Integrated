@@ -12,4 +12,8 @@ public class UserDatabase {
         users.add(new Admin(1, "admin", "java"));
     }
     
+    public void addUser(User user) {
+        users.add(user);
+    }
+    
 }
