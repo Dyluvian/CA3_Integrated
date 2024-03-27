@@ -32,5 +32,9 @@ public class MySQLController {
             e.printStackTrace();
             return null;
         }
-    }    
+    }
+
+    public void generateReport(ResultSet resultSet, String fileName, ReportFormatter formatter) {
+        formatter.generateReport(resultSet, fileName);
+    }
 }
