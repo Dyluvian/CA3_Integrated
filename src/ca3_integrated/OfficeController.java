@@ -21,7 +21,34 @@ public class OfficeController implements UserController {
     }
     
 
-
+// TO CHANGE YOUR USERNAME AND PASSWORD
+                case 2:
+                    int activeOfficeID = office.getUserID();
+                    User activeOffice = userDatabase.getUser(activeOfficeID);
+                    System.out.println("---\nAcknowledged.\nInput 1 to modify your username.\nInput 2 to modify your password.");
+                    System.out.println("---");
+                    int choiceCredentials = scanner.nextInt();
+                    switch (choiceCredentials) {
+                        case 1:
+                            System.out.println("---\nNow, please input the new username you would like to change over to.\n---");
+                            String newUsername = scanner.next();
+                            if (userDatabase.usernameExists(newUsername)) {
+                                System.out.println("---\nSuperlative! Your username has been updated. Renewals within renewals.");
+                                break;
+                            }
+                            activeOffice.setUsername(newUsername);
+                            System.out.println("---\nYour username has been updated successfully.\n---");
+                            break;
+                        case 2:
+                            System.out.println("---\nNow, please input your new password.\n---");
+                            activeOffice.setPassword(scanner.next());
+                            System.out.println("---\nSplendid! Your password has been changed. Go forth and feel secure!");
+                            break;
+                        default:
+                            System.out.println("---\nNonsense! That is not valid input. You must choose either your username (1), or password (2).\n---");
+                    }
+                    userDatabase.updateUser(activeLecturer.getUserID(), activeOffice);
+                    break;
 // TO LOG OUT
                 case 3: // if the user inputs 3...
                     logout(); // ...run the logout method
