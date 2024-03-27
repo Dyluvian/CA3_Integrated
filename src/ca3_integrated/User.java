@@ -26,4 +26,6 @@ public interface User {
     void setPassword(String password);
 
     String getRole();
+    
+    void setRole(String role);
 }
