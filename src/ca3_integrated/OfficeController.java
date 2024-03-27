@@ -31,7 +31,7 @@ public class OfficeController implements UserController {
         }
     }
 
-    public void showLecturerMenu(Lecturer lecturer) {
+    public void showOfficeMenu(Office office) {
         Scanner scanner = new Scanner(System.in);
         int choice;
         do {
