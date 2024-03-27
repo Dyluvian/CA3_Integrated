@@ -7,7 +7,8 @@ package ca3_integrated;
 // ------------------
 // INTERFACE: LOGIN VIEW
 // ------------------
-// 
+// The Login View is simply the user-facing interface for login functionality.
+// It draws on the implementations in ConsoleLoginView.
 // ------------------
 */
 
@@ -15,7 +16,7 @@ public interface LoginView {
 
     void displayLoginPrompt(); // Run the method to display the login prompt.
 
-    String getUserInput();
+    String getUserInput(); // Getter method for user input.
 
-    String getPasswordInput();
+    String getPasswordInput(); // Getter method for password input.
 }
