@@ -18,5 +18,9 @@ public class AdminController {
     public AdminController(UserDatabase userDatabase) {
         this.userDatabase = userDatabase;
     }
+    
+    @Override
+    public void login() {
+    }
   
 }
