@@ -145,4 +145,20 @@ public class AdminController {
                         userDatabase.updateUser(userID, user);
                     }
                     break;
+// TO DELETE USERS
+                case 4:
+                    System.out.println("---\nPlease input the user ID of the user you wish to delete.\n---");
+                    int deleteUserID = scanner.nextInt();
+                    User userToDelete = userDatabase.getUser(deleteUserID);
+                    if (userToDelete == null) {
+                        System.out.println("---\nImpossible! There is no such user. None where there's none wanted! Please choose an existing ID next time.");
+                    } else {
+                        if (deleteUserID == admin.getUserID()) {
+                            System.out.println("---\nLaughable! That is your own user ID! You are not permitted to delete your own account. Ho ho ho.");
+                        } else {
+                            userDatabase.deleteUser(deleteUserID);
+                            System.out.println("---\nStupendous! The user has been removed from the database.");
+                        }
+                    }
+                    break;
             }
