@@ -165,4 +165,7 @@ public class AdminController {
                 case 5:
                     logout();
                     return;
+                case 6:
+                    System.out.println("---\nFast times at Innistown College, eh? Enjoy your day, your week, your month, and your year. Byeeeeee!");
+                    System.exit(0);
             }
