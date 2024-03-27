@@ -66,6 +66,9 @@ public class UserDatabase {
                 ((Staff) user).decrementUserID(); // decrement their ID
             }
         }
+        if (userDeleted) { // if a user is deleted...
+            Staff.lastAssignedUserID--; // decrement the last assigned user ID, so that there will be no numerical gaps in the IDs
+        }
     }
 
     public User verifyUser(String username, String password) { // verification for login

@@ -12,7 +12,7 @@ package ca3_integrated;
  */
 public abstract class Staff implements User {
 
-    private static int lastAssignedUserID = 0;
+    public static int lastAssignedUserID = 0;
 
     private int userID;
     private String username;
