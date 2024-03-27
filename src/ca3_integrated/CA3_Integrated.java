@@ -5,7 +5,7 @@ package ca3_integrated;
 // ------------------
 // https://github.com/Dyluvian/CA3_Integrated
 // ------------------
-// CLASS: CA3_PROTOTYPE (MAIN METHOD)
+// CLASS: CA3_INTEGRATED (MAIN METHOD)
 // ------------------
 // 
 // ------------------
