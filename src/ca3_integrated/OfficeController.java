@@ -9,6 +9,13 @@ package ca3_integrated;
 // 
 // ------------------
 */
-public class OfficeController {
-    
-}
+
+import java.util.Scanner;
+
+public class OfficeController implements UserController {
+
+    private UserDatabase userDatabase;
+
+    public OfficeController(UserDatabase userDatabase) {
+        this.userDatabase = userDatabase;
+    }
