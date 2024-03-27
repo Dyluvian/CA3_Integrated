@@ -56,5 +56,16 @@ public class UserDatabase {
             }
         }
     }
-
+    
+    public User verifyUser(String username, String password) {
+        if (users == null) {
+            return null;
+        }
+        for (User user : users) {
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                return user;
+            }
+        }
+        return null;
+    }
 }
