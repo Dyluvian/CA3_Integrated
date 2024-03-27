@@ -25,3 +25,10 @@ public class LecturerController implements UserController {
     public void login() {
     }
     
+    @Override
+    public void showMenu(User user) {
+        if (user instanceof Lecturer) {
+            showLecturerMenu((Lecturer) user);
+        }
+    }
+    
