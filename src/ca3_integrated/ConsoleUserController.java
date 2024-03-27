@@ -11,6 +11,6 @@ package ca3_integrated;
 // ------------------
 */
 
-public class ConsoleUserController {
+public class ConsoleUserController implements UserController {
     
 }

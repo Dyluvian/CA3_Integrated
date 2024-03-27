@@ -7,12 +7,11 @@ package ca3_integrated;
 // ------------------
 // CLASS: STAFF
 // ------------------
-// 
+//
 // ------------------
-*/
-    
+ */
 public abstract class Staff implements User {
-    
+
     private static int lastAssignedUserID = 0;
 
     private int userID;
@@ -26,35 +25,39 @@ public abstract class Staff implements User {
         this.password = password;
         this.role = role;
     }
-    
+
     @Override
     public int getUserID() {
         return userID;
     }
-    
+
     @Override
     public void decrementUserID() {
         userID--;
     }
-    
+
     @Override
     public String getUsername() {
         return username;
     }
-    
+
     @Override
     public void setUsername(String username) {
         this.username = username;
     }
-    
+
     @Override
     public String getPassword() {
         return password;
     }
-    
+
     @Override
     public void setPassword(String password) {
         this.password = password;
     }
-    
+
+    @Override
+    public String getRole() {
+        return role;
+    }
 }
