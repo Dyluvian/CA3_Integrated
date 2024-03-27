@@ -13,4 +13,10 @@ package ca3_integrated;
 
 public class AdminController {
     
+    private UserDatabase userDatabase;
+
+    public AdminController(UserDatabase userDatabase) {
+        this.userDatabase = userDatabase;
+    }
+  
 }
