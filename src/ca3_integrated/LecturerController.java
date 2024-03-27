@@ -32,3 +32,10 @@ public class LecturerController implements UserController {
         }
     }
     
+    public void showLecturerMenu(Lecturer lecturer) {
+        Scanner scanner = new Scanner(System.in);
+        int choice;
+        do {
+            System.out.println("---\nInput 1 to do nothing for now.\nInput 2 to change your username and password.\nInput 3 to log out.\nInput 4 to close the software.\n---");
+            choice = scanner.nextInt();
+            switch (choice) {
