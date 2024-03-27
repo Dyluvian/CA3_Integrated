@@ -33,5 +33,28 @@ public class UserDatabase {
             System.out.println("User ID: " + userToIterate.getUserID() + ". Username: " + userToIterate.getUsername() + ". Password: " + userToIterate.getPassword() + ". Role: " + userToIterate.getRole());
         }
     }
+    
+    public void updateUser(int userID, User newUser) {
+        for (int i = 0; i < users.size(); i++) {
+            if (users.get(i).getUserID() == userID) {
+                users.set(i, newUser);
+                return;
+            }
+        }
+    }
+    
+    public void deleteUser(int userIDToDelete) {
+        boolean userDeleted = false;
+        Iterator<User> iterateUsers = users.iterator();
+        while (iterateUsers.hasNext()) {
+            User user = iterateUsers.next();
+            if (user.getUserID() == userIDToDelete) {
+                iterateUsers.remove();
+                userDeleted = true;
+            } else if (user.getUserID() > userIDToDelete && userDeleted) {
+                ((Staff) user).decrementUserID();
+            }
+        }
+    }
 
 }
