@@ -19,3 +19,10 @@ public class OfficeController implements UserController {
     public OfficeController(UserDatabase userDatabase) {
         this.userDatabase = userDatabase;
     }
+    
+
+
+// TO LOG OUT
+                case 3: // if the user inputs 3...
+                    logout(); // ...run the logout method
+                    return;
