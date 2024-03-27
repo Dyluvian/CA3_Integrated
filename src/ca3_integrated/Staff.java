@@ -52,4 +52,9 @@ public abstract class Staff implements User {
         return password;
     }
     
+    @Override
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
 }
