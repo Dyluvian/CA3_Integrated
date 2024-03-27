@@ -20,3 +20,12 @@ public class ConsoleUserController implements UserController {
         this.userDatabase = userDatabase;
     }
 }
+
+
+
+    @Override
+    public void logout() {
+        System.out.println("INSERT LOGOUT TEXT");
+        login();
+    }
+}
