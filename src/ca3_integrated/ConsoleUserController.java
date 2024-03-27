@@ -12,5 +12,11 @@ package ca3_integrated;
 */
 
 public class ConsoleUserController implements UserController {
-    
+    private LoginView loginView;
+    private UserDatabase userDatabase;
+
+    public ConsoleUserController(LoginView loginView, UserDatabase userDatabase) {
+        this.loginView = loginView;
+        this.userDatabase = userDatabase;
+    }
 }
