@@ -79,4 +79,13 @@ public class UserDatabase {
         }
         return null;
     }
+    
+    public boolean usernameExists(String username) {
+        for (User user : users) {
+            if (user.getUsername().equals(username)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
