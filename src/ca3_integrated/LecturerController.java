@@ -20,3 +20,8 @@ public class LecturerController implements UserController {
     public LecturerController(UserDatabase userDatabase) {
         this.userDatabase = userDatabase;
     }
+    
+    @Override
+    public void login() {
+    }
+    
