@@ -1,5 +1,16 @@
 package ca3_integrated;
 
+/*
+// Dylan Geraghty - CA3 (Integrated CA) - Programming: Object-Oriented Approach
+// ------------------
+// https://github.com/Dyluvian/CA3_Integrated
+// ------------------
+// CLASS: REPORT FORMATTER FOR TXT FORMAT (TEXTREPORTFORMATTER)
+// ------------------
+// This class contains logic to format reports as TXT files, feeding the Report Formatter interface.
+// ------------------
+*/
+
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.sql.ResultSet;
