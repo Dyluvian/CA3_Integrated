@@ -37,4 +37,9 @@ public abstract class Staff implements User {
         userID--;
     }
     
+    @Override
+    public String getUsername() {
+        return username;
+    }
+    
 }
