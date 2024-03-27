@@ -44,4 +44,40 @@ public class AdminController {
                     System.out.println("---");
                     userDatabase.printAllUsers();
                     break;
-}
+// TO ADD NEW USERS
+                case 2:
+                    System.out.println("---\nPlease input the username of the user you wish to add.\n---");
+                    String username = scanner.next();
+                    if (userDatabase.usernameExists(username)) {
+                        System.out.println("---\nUnfortunately, a user by this name already exists! We can barely cope with one of you as it is. Please input a different name.");
+                        break;
+                    }
+                    System.out.println("---\nNow, please input the user's password.\n---");
+                    String password = scanner.next();
+                    System.out.println("---\nFinally, please input the role of the new user. Currently, the valid options are Admin, Office, and Lecturer.\n---");
+                    while (true) {
+                        String role = scanner.next();
+                        User newUser;
+                        switch (role.toLowerCase()) {
+                            case "admin":
+                            case "1":
+                                newUser = new Admin(0, username, password);
+                                break;
+                            case "office":
+                            case "2":
+                                newUser = new Office(0, username, password);
+                                break;
+                            case "lecturer":
+                            case "3":
+                                newUser = new Lecturer(0, username, password);
+                                break;
+                            default:
+                                System.out.println("---\nThat is not a valid role. Please select one of the valid options: Admin, Office, or Lecturer.\n---");
+                                continue;
+                        }
+                        userDatabase.addUser(newUser);
+                        System.out.println("---\nExcellent! The new user has been added, and may now log in. Best of luck to them!");
+                        break;
+                    }
+                    break;
+            }
