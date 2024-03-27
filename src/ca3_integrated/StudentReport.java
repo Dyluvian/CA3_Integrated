@@ -17,3 +17,39 @@ public class StudentReport {
     public StudentReport(ReportFormatter reportFormatter) {
         this.reportFormatter = reportFormatter;
     }
+    
+    public void generateReport(String format) {
+        try {
+            Connection connection = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+            Statement statement = connection.createStatement();
+
+            String studentReportQuery = "SELECT students.first_name, students.last_name, students.student_number FROM students";
+
+            ResultSet resultSet = statement.executeQuery(studentReportQuery);
+
+            String fileName = "CourseReport";
+
+            switch (format) {
+                case "csv":
+                    fileName += ".csv";
+                    break;
+                case "txt":
+                    fileName += ".txt";
+                    break;
+                case "console":
+                    break;
+                default:
+                    System.out.println("NOT VALID FORMAT");
+                    return;
+            }
+
+            reportFormatter.generateReport(resultSet, fileName);
+
+            resultSet.close();
+            statement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
