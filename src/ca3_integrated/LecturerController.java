@@ -82,3 +82,10 @@ public class LecturerController implements UserController {
             }
         } while (true); // run in perpetuity, until input is found
     }
+
+    public void logout() {
+        System.out.println("---\nYou have logged out. Luckily, Innistown College has invested in automatic doors, which will not hit you on the way out.");
+        UserController controller = new ConsoleUserController(new ConsoleLoginView(), userDatabase);
+        controller.login();
+    }
+}
