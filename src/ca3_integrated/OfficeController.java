@@ -38,8 +38,42 @@ public class OfficeController implements UserController {
             System.out.println("---\nInput 1 to do nothing for now.\nInput 2 to change your username and password.\nInput 3 to log out.\nInput 4 to close the software.\n---");
             choice = scanner.nextInt();
             switch (choice) {
-// TO GENERATE A REPORT, I'LL GET BACK TO YOU
-
+// TO GENERATE A REPORT?
+            case 1:
+            System.out.println("---\nAcknowledged.\nInput 1 to generate a Course Report.\nInput 2 to generate a Lecturer Report.\nInput 3 to generate a Student Report..\n---");
+                    int reportType = scanner.nextInt();
+                    scanner.nextLine();
+            System.out.println("---\nUnderstood.\nInput 1 to output the report in CSV format.\nInput 2 to output it in TXT format.\nInput 3 to print the output to the console.\n---");
+                    int outputFormat = scanner.nextInt();
+                    String format;
+                    switch (outputFormat) {
+                        case 1:
+                            format = "csv";
+                            break;
+                        case 2:
+                            format = "txt";
+                            break;
+                        case 3:
+                            format = "console";
+                            break;
+                        default:
+                            System.out.println("\nThat is not a valid format! Printing to console in the absence of better ideas.");
+                            format = "console";
+                    }
+                    switch (reportType) {
+                        case 1:
+                            generateCourseReport(format);
+                            break;
+                        case 2:
+                            generateLecturerReport(format);
+                            break;
+                        case 3:
+                            generateStudentReport(format);
+                            break;
+                        default:
+                            System.out.println("\nThat does not correspond to a valid report type!");
+                    }
+                    break;
 // TO CHANGE YOUR USERNAME AND PASSWORD
                 case 2:
                     int activeOfficeID = office.getUserID();
