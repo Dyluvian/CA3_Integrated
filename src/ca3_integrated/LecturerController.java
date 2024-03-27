@@ -11,6 +11,12 @@ package ca3_integrated;
 // ------------------
 */
 
-public class LecturerController {
-    
-}
+import java.util.Scanner;
+
+public class LecturerController implements UserController {
+
+    private UserDatabase userDatabase;
+
+    public LecturerController(UserDatabase userDatabase) {
+        this.userDatabase = userDatabase;
+    }
