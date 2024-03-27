@@ -47,4 +47,9 @@ public abstract class Staff implements User {
         this.username = username;
     }
     
+    @Override
+    public String getPassword() {
+        return password;
+    }
+    
 }
