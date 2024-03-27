@@ -168,4 +168,9 @@ public class AdminController {
                 case 6:
                     System.out.println("---\nFast times at Innistown College, eh? Enjoy your day, your week, your month, and your year. Byeeeeee!");
                     System.exit(0);
+                default:
+                    System.out.println("---\nThat is not valid input. Perhaps you would care to give that another try? I have all day.\n");
             }
+        } while (true);
+    }
+}    
