@@ -1,13 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ca3_integrated;
 
-/**
- *
- * @author User
- */
-public class Admin {
-    
+public class Admin extends Staff {
+
+    public Admin(int userID, String username, String password) {
+        super(userID, username, password, "Admin");
+    }
 }
