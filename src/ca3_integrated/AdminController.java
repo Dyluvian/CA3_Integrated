@@ -172,5 +172,11 @@ public class AdminController {
                     System.out.println("---\nThat is not valid input. Perhaps you would care to give that another try? I have all day.\n");
             }
         } while (true);
+    } 
+
+    public void logout() {
+        System.out.println("---\nYou have logged out. All too sad to see you go! On the bright side of life, there are many other users in the sea.");
+        UserController controller = new ConsoleUserController(new ConsoleLoginView(), userDatabase);
+        controller.login();
     }
-}    
+}
