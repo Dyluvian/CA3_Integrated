@@ -22,5 +22,12 @@ public class AdminController {
     @Override
     public void login() {
     }
+    
+    @Override
+    public void showMenu(User user) {
+        if (user instanceof Admin) {
+            showAdminMenu((Admin) user);
+        }
+    }
   
 }
