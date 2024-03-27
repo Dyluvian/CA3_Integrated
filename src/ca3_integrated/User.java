@@ -14,6 +14,8 @@ package ca3_integrated;
 public interface User {
     
     int getUserID();
+    
+    void decrementUserID();
 
     String getUsername();
     
