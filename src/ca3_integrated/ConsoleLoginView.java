@@ -25,3 +25,8 @@ public class ConsoleLoginView implements LoginView {
     public void displayLoginPrompt() {
         System.out.println("---\nTo log in and perform operations, please begin by inputting your username.\n---");
     }
+    
+    @Override
+    public String getUserInput() {
+        return scanner.nextLine();
+    }
