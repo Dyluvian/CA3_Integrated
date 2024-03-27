@@ -20,6 +20,25 @@ public class OfficeController implements UserController {
         this.userDatabase = userDatabase;
     }
     
+    @Override
+    public void login() {
+    }
+
+    @Override
+    public void showMenu(User user) {
+        if (user instanceof Office) {
+            showOfficeMenu((Office) user);
+        }
+    }
+
+    public void showLecturerMenu(Lecturer lecturer) {
+        Scanner scanner = new Scanner(System.in);
+        int choice;
+        do {
+            System.out.println("---\nInput 1 to do nothing for now.\nInput 2 to change your username and password.\nInput 3 to log out.\nInput 4 to close the software.\n---");
+            choice = scanner.nextInt();
+            switch (choice) {
+// TO GENERATE A REPORT, I'LL GET BACK TO YOU
 
 // TO CHANGE YOUR USERNAME AND PASSWORD
                 case 2:
@@ -47,7 +66,7 @@ public class OfficeController implements UserController {
                         default:
                             System.out.println("---\nNonsense! That is not valid input. You must choose either your username (1), or password (2).\n---");
                     }
-                    userDatabase.updateUser(activeLecturer.getUserID(), activeOffice);
+                    userDatabase.updateUser(activeOffice.getUserID(), activeOffice);
                     break;
 // TO LOG OUT
                 case 3: // if the user inputs 3...
