@@ -39,5 +39,9 @@ public class AdminController {
             System.out.println("---\nInput 1 to view current users.\nInput 2 to add new users.\nInput 3 to modify the usernames, passwords, and roles of other users.\nInput 4 to delete users.\nInput 5 to log out.\nInput 6 to close the software.\n---");
             choice = scanner.nextInt();
             switch (choice) {
-  
+// TO VIEW CURRENT USERS
+                case 1:
+                    System.out.println("---");
+                    userDatabase.printAllUsers();
+                    break;
 }
