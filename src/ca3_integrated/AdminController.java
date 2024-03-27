@@ -13,7 +13,7 @@ package ca3_integrated;
 
 import java.util.Scanner;
 
-public class AdminController {
+public class AdminController implements UserController {
     
     private UserDatabase userDatabase;
 
@@ -24,7 +24,7 @@ public class AdminController {
     @Override
     public void login() {
     }
-    
+
     @Override
     public void showMenu(User user) {
         if (user instanceof Admin) {
