@@ -80,4 +80,69 @@ public class AdminController {
                         break;
                     }
                     break;
+// TO MODIFY THE USERNAMES, PASSWORDS, AND ROLES OF OTHER USERS
+                case 3:
+                    System.out.println("---\nPlease enter the ID of the user whose credentials you wish to modify.\n---");
+                    int userID = scanner.nextInt();
+                    User user = userDatabase.getUser(userID);
+                    if (user == null) {
+                        System.out.println("---\nUnfortunately, no such user has been located! Alas, not even down the back of the sofa.");
+                    } else {
+                        if (userID == admin.getUserID()) {
+                            System.out.println("---\nUnfortunately, you are not allowed to modify your own credentials! The high scriptures forbid it.");
+                            break;
+                        }
+                        System.out.println("---\nAcknowledged.\nInput 1 to modify their username.\nInput 2 to modify their password.\nInput 3 to modify their role.\n---");
+                        int choiceCredentials = scanner.nextInt();
+                        switch (choiceCredentials) {
+                            case 1:
+                                System.out.println("---\nNow, please input the new username you wish to grant this user.\n---");
+                                String newUsername = scanner.next();
+                                if (userDatabase.usernameExists(newUsername)) {
+                                    System.out.println("---\nUnfortunately, this username already exists in the database! Two heads are more than one! Please choose another one.");
+                                    break;
+                                }
+                                user.setUsername(newUsername);
+                                System.out.println("---\nTerrific! Their username has been updated. A change is as good as a rest.");
+                                break;
+                            case 2:
+                                System.out.println("---\nNow, please input the user's new password.\n---");
+                                user.setPassword(scanner.next());
+                                System.out.println("---\nFantastic! Their password has been changed. Play nice with this information!");
+                                break;
+                            case 3:
+                                boolean validRole = false;
+                                System.out.println("---\nNow, please input the role of the new user. You may choose Admin, Office, or Lecturer.\n---");
+                                while (!validRole) {
+                                    String newRole = scanner.next();
+                                    switch (newRole.toLowerCase()) {
+                                        case "admin":
+                                        case "1":
+                                            user.setRole("Admin");
+                                            validRole = true;
+                                            System.out.println("---\nCallooh, callay! May the user revel in their new role, if possible.");
+                                            break;
+                                        case "office":
+                                        case "2":
+                                            user.setRole("Office");
+                                            validRole = true;
+                                            System.out.println("---\nCallooh, callay! May the user revel in their new role, if possible.");
+                                            break;
+                                        case "lecturer":
+                                        case "3":
+                                            user.setRole("Lecturer");
+                                            validRole = true;
+                                            System.out.println("---\nCallooh, callay! May the user revel in their new role, if possible.");
+                                            break;
+                                        default:
+                                            System.out.println("---\nUnfortunately, that is not a valid role! Please choose Admin, Office, or Lecturer.\n---");
+                                    }
+                                }
+                                break;
+                            default:
+                                System.out.println("---\nCome, now! We both know that is not a valid option. Please input one of the available choices.");
+                        }
+                        userDatabase.updateUser(userID, user);
+                    }
+                    break;
             }
