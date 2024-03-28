@@ -87,7 +87,7 @@ public class LecturerController implements UserController {
     }
 
     public void logout() {
-        System.out.println("---\nYou have logged out. Luckily, Innistown College has invested in automatic doors, which will not hit you on the way out.");
+        System.out.println("---\nYou have logged out. There is a famous Kurt Vonnegut quote: 'so it goes.' Go well!");
         UserController controller = new ConsoleUserController(new ConsoleLoginView(), userDatabase); // get a new User Controller going
         controller.login(); // and return to the login screen
     }

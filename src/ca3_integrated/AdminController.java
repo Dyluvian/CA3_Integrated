@@ -120,19 +120,19 @@ public class AdminController implements UserController {
                                         case "admin":
                                         case "1":
                                             user.setRole("Admin"); // create the Admin
-                                            validRole = true;
+                                            validRole = true; // and end the loop
                                             System.out.println("---\nCallooh, callay! May the user revel in their new role, if possible.");
                                             break;
                                         case "office":
                                         case "2":
                                             user.setRole("Office"); // create the Office person
-                                            validRole = true;
+                                            validRole = true; // and end the loop
                                             System.out.println("---\nCallooh, callay! May the user revel in their new role, if possible.");
                                             break;
                                         case "lecturer":
                                         case "3":
                                             user.setRole("Lecturer"); // create the Lecturer
-                                            validRole = true;
+                                            validRole = true; // and end the loop
                                             System.out.println("---\nCallooh, callay! May the user revel in their new role, if possible.");
                                             break;
                                         default: // ...or create nobody and tell off the admin
