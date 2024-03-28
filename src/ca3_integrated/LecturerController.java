@@ -37,11 +37,33 @@ public class LecturerController implements UserController {
         Scanner scanner = new Scanner(System.in); // kickstart the scanner
         int choice; // initialise the choice integer for switch
         do {
-            System.out.println("---\nInput 1 to do nothing for now.\nInput 2 to change your username and password.\nInput 3 to log out.\nInput 4 to close the software.\n---"); // instructions
+            System.out.println("---\nInput 1 to generate a Lecturer report.\nInput 2 to change your username and password.\nInput 3 to log out.\nInput 4 to close the software.\n---"); // instructions
             choice = scanner.nextInt(); // next int inserted defines your choice
             switch (choice) {
-// TO GENERATE A LECTURER REPORT, I'LL GET BACK TO YOU
-
+// TO GENERATE A LECTURER REPORT
+                case 1: // if you input 1...
+                    System.out.println("---\nAcknowledged. Now, choose your format.\nInput 1 to output the report in CSV format.\nInput 2 to output it in TXT format.\nInput 3 to print the output to the console.\n---");
+                    String outputFormat = scanner.next(); // the next input will represent the modified role
+                    String format;
+                    switch (outputFormat.toLowerCase()) { // lettercase matters little
+                        case "csv": // if the user enters csv...
+                        case "1": // or 1...
+                            format = "csv"; // then csv it is
+                            break;
+                        case "txt": // if the user enters txt...
+                        case "2": // or 2...
+                            format = "txt"; // then txt it is
+                            break;
+                        case "console": // if the user enters console...
+                        case "3":  // or 3...
+                            format = "console"; // then console it is
+                            break;
+                        default: // if you input nonsense...
+                            System.out.println("\nThat is not a valid format! Printing to console in the absence of better ideas.");
+                            format = "console";
+                    }
+                    generateLecturerReport(format);
+                    break;
 // TO CHANGE YOUR USERNAME AND PASSWORD
                 case 2: // if you input 2...
                     int activeLecturerID = lecturer.getUserID(); // note the active lecturer's ID
@@ -90,5 +112,23 @@ public class LecturerController implements UserController {
         System.out.println("---\nYou have logged out. There is a famous Kurt Vonnegut quote: 'so it goes.' Go well!");
         UserController controller = new ConsoleUserController(new ConsoleLoginView(), userDatabase); // get a new User Controller going
         controller.login(); // and return to the login screen
+    }
+
+    private void generateLecturerReport(String format) {
+        LecturerReport lecturerReport = new LecturerReport(getFormatter(format));
+        lecturerReport.generateReport(format);
+    }
+    
+    private ReportFormatter getFormatter(String format) {
+        switch (format) {
+            case "csv":
+                return new CSVReportFormatter();
+            case "txt":
+                return new TextReportFormatter();
+            case "console":
+//                TBD
+            default:
+                throw new IllegalArgumentException("BAD FORMAT!: " + format);
+        }
     }
 }

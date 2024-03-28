@@ -25,7 +25,11 @@ public class CSVReportFormatter implements ReportFormatter {
                 StringBuilder line = new StringBuilder();
                 int columnCount = resultSet.getMetaData().getColumnCount();
                 for (int i = 1; i <= columnCount; i++) {
-                    line.append(resultSet.getString(i));
+                    String value = resultSet.getString(i);
+                    if (value != null) {
+                        value = value.replace(",", " + ");
+                    }
+                    line.append(value);
                     if (i < columnCount) {
                         line.append(",");
                     }
