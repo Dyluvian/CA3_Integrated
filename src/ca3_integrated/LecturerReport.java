@@ -34,8 +34,21 @@ public class LecturerReport {
         try {
             Connection connection = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
             Statement statement = connection.createStatement();
-
-            String lecturerReportQuery = "SELECT lecturers.first_name, lecturers.last_name, lecturers.role, lecturers.types_of_classes FROM lecturers";
+            
+            String lecturerReportQuery = "SELECT " +
+                            "CONCAT(l.first_name, ' ', l.last_name) AS Lecturer_Name, " +
+                            "l.role AS Lecturer_Role, " +
+                            "GROUP_CONCAT(DISTINCT m.module_name) AS Modules_Taught, " +
+                            "COUNT(DISTINCT e.student_id) AS Number_of_Students, " +
+                            "l.types_of_classes AS Types_of_Classes_Taught " +
+                        "FROM " +
+                            "lecturers l " +
+                        "JOIN " +
+                            "modules m ON l.lecturer_id = m.lecturer_id " +
+                        "LEFT JOIN " +
+                            "enrollments e ON m.module_id = e.module_id " +
+                        "GROUP BY " +
+                            "l.lecturer_id";
 
             ResultSet resultSet = statement.executeQuery(lecturerReportQuery);
 
