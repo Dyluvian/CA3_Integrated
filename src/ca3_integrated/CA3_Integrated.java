@@ -7,7 +7,13 @@ package ca3_integrated;
 // ------------------
 // CLASS: CA3_INTEGRATED (MAIN METHOD)
 // ------------------
-// 
+// Welcome to the Java portion of the integrated CA, version who knows what.
+// This has been started, experimented with, restarted, prototyped, rebooted, torn up, flame grilled, and reborn a few times too many.
+// I wanted to do my best to give abstraction and modularity a decent shake, but not easy to wrap the mind around everything this quickly.
+// Still not fully sure of it but can only do my best. It required a lot of blocking out and quick restructuring against tight deadlines.
+// Hopefully it is all functional after time of writing and ticks a few boxes at least.
+// ------------------
+// If you'd like to read something pleasant AFTER GRADING, very deliberately separated out, go to Cheers.java.
 // ------------------
 */
 
