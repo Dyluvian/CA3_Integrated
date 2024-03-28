@@ -34,7 +34,24 @@ public class CourseReport {
             Connection connection = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
             Statement statement = connection.createStatement();
 
-            String courseReportQuery = "SELECT modules.module_name FROM modules";
+            String courseReportQuery = "SELECT " +
+                            "m.module_name AS Module_Name, " +
+                            "c.course_name AS Course_Name, " +
+                            "COUNT(DISTINCT e.student_id) AS Number_of_Students_Enrolled, " +
+                            "CONCAT(l.first_name, ' ', l.last_name) AS Lecturer_Name, " +
+                            "m.room AS Room_Assigned " +
+                        "FROM " +
+                            "modules m " +
+                        "JOIN " +
+                            "courses c ON m.course_id = c.course_id " +
+                        "JOIN " +
+                            "enrollments e ON m.module_id = e.module_id " +
+                        "JOIN " +
+                            "lecturers l ON m.lecturer_id = l.lecturer_id " +
+                        "GROUP BY " +
+                            "m.module_id " +
+                        "ORDER BY " +
+                            "Module_Name";
 
             ResultSet resultSet = statement.executeQuery(courseReportQuery);
 
