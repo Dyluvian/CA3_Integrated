@@ -29,10 +29,9 @@ public class LecturerReport {
         this.reportFormatter = reportFormatter;
     }
     
-
     public void generateReport(String format) {
         try {
-            Connection connection = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+            Connection connection = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD); // connect to the database
             Statement statement = connection.createStatement();
             
             String lecturerReportQuery = "SELECT " +
@@ -50,27 +49,27 @@ public class LecturerReport {
                         "GROUP BY " +
                             "l.lecturer_id";
 
-            ResultSet resultSet = statement.executeQuery(lecturerReportQuery);
+            ResultSet resultSet = statement.executeQuery(lecturerReportQuery); // run the above MySQL query
 
-            String fileName = "LecturerReport";
+            String fileName = "LecturerReport"; // name the output
 
-            switch (format) {
-                case "csv":
-                    fileName += ".csv";
+            switch (format) { // format the report based on the format requested
+                case "csv": // if it's csv...
+                    fileName += ".csv"; // append csv to the filename
                     break;
-                case "txt":
-                    fileName += ".txt";
+                case "txt": // if it's txt...
+                    fileName += ".txt"; // append txt to the filename
                     break;
-                case "console":
-                    break;
-                default:
-                    System.out.println("NOT VALID FORMAT");
+                case "console": // if it's console...
+                    break; // no file, so do nothing
+                default: // if it's not valid...
+                    System.out.println("---\nUnfortunately, no valid format has been specified."); // print an error
                     return;
             }
 
-            reportFormatter.generateReport(resultSet, fileName);
+            reportFormatter.generateReport(resultSet, fileName); // generate the report...
 
-            resultSet.close();
+            resultSet.close(); // and close everything out
             statement.close();
             connection.close();
         } catch (SQLException e) {

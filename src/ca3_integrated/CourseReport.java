@@ -31,7 +31,7 @@ public class CourseReport {
 
     public void generateReport(String format) {
         try {
-            Connection connection = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+            Connection connection = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD); // connect to the database
             Statement statement = connection.createStatement();
 
             String courseReportQuery = "SELECT " +
@@ -53,27 +53,27 @@ public class CourseReport {
                         "ORDER BY " +
                             "Module_Name";
 
-            ResultSet resultSet = statement.executeQuery(courseReportQuery);
+            ResultSet resultSet = statement.executeQuery(courseReportQuery); // run the above MySQL query
 
-            String fileName = "CourseReport";
+            String fileName = "CourseReport"; // name the output
 
-            switch (format) {
-                case "csv":
-                    fileName += ".csv";
+            switch (format) { // format the report based on the format requested
+                case "csv": // if it's csv...
+                    fileName += ".csv"; // append csv to the filename
                     break;
-                case "txt":
-                    fileName += ".txt";
+                case "txt": // if it's txt...
+                    fileName += ".txt"; // append txt to the filename
                     break;
-                case "console":
-                    break;
-                default:
-                    System.out.println("NOT VALID FORMAT");
+                case "console": // if it's console...
+                    break; // no file, so do nothing
+                default: // if it's not valid...
+                    System.out.println("---\nUnfortunately, no valid format has been specified."); // print an error
                     return;
             }
 
-            reportFormatter.generateReport(resultSet, fileName);
+            reportFormatter.generateReport(resultSet, fileName); // generate the report...
 
-            resultSet.close();
+            resultSet.close(); // and close everything out
             statement.close();
             connection.close();
         } catch (SQLException e) {
