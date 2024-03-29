@@ -45,7 +45,7 @@ public class OfficeController implements UserController { // import Scanner for 
                     String reportType = scanner.next(); // next input will represent the report TYPE (Course, Lecturer etc) to output
                     scanner.nextLine();
             System.out.println("---\nUnderstood. Now, choose your format.\nInput 1 to output the report in CSV format.\nInput 2 to output it in TXT format.\nInput 3 to print the output to the console.\n---");
-                    String outputFormat = scanner.next(); // the next input will represent the modified role
+                    String outputFormat = scanner.next(); // the next input will represent the format
                     String format;
                     switch (outputFormat.toLowerCase()) { // lettercase matters little
                         case "csv": // if the user enters csv...
