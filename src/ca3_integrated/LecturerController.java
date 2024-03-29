@@ -115,20 +115,20 @@ public class LecturerController implements UserController {
     }
 
     private void generateLecturerReport(String format) {
-        LecturerReport lecturerReport = new LecturerReport(getFormatter(format));
-        lecturerReport.generateReport(format);
+        LecturerReport lecturerReport = new LecturerReport(getFormatter(format)); // create a new Lecturer Report...
+        lecturerReport.generateReport(format); // and use the format to generate it
     }
-    
+
     private ReportFormatter getFormatter(String format) {
-        switch (format) {
-            case "csv":
-                return new CSVReportFormatter();
-            case "txt":
-                return new TextReportFormatter();
-            case "console":
-//                TBD
-            default:
-                throw new IllegalArgumentException("BAD FORMAT!: " + format);
+        switch (format) { // get the right formatter based on the format inserted
+            case "csv": // if csv is input...
+                return new CSVReportFormatter(); // use the CSV formatter
+            case "txt": // if txt is input...
+                return new TextReportFormatter(); // use the TXT formatter
+            case "console": // if console is input...
+                return new ConsoleReportFormatter(); // use the console formatter
+            default: // if nothing valid is input...
+                throw new IllegalArgumentException("---\nUnfortunately, no valid formatter was found."); // ...lodge a complaint
         }
     }
 }

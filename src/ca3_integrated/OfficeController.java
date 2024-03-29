@@ -41,7 +41,7 @@ public class OfficeController implements UserController { // import Scanner for 
             switch (choice) {
 // TO GENERATE A REPORT
             case 1: // if you input 1...
-            System.out.println("---\nAcknowledged. Now, select which type of report.\nInput 1 to generate a Course Report.\nInput 2 to generate a Lecturer Report.\nInput 3 to generate a Student Report..\n---");
+            System.out.println("---\nAcknowledged. Now, select which type of report.\nInput 1 to generate a Course Report.\nInput 2 to generate a Lecturer Report.\nInput 3 to generate a Student Report.\n---");
                     String reportType = scanner.next(); // next input will represent the report TYPE (Course, Lecturer etc) to output
                     scanner.nextLine();
             System.out.println("---\nUnderstood. Now, choose your format.\nInput 1 to output the report in CSV format.\nInput 2 to output it in TXT format.\nInput 3 to print the output to the console.\n---");
@@ -129,30 +129,30 @@ public class OfficeController implements UserController { // import Scanner for 
     }
 
     private void generateCourseReport(String format) {
-        CourseReport courseReport = new CourseReport(getFormatter(format));
-        courseReport.generateReport(format);
+        CourseReport courseReport = new CourseReport(getFormatter(format)); // create a new Course Report...
+        courseReport.generateReport(format); // and use the format to generate it
     }
 
     private void generateLecturerReport(String format) {
-        LecturerReport lecturerReport = new LecturerReport(getFormatter(format));
-        lecturerReport.generateReport(format);
+        LecturerReport lecturerReport = new LecturerReport(getFormatter(format)); // create a new Lecturer Report...
+        lecturerReport.generateReport(format); // and use the format to generate it
     }
 
     private void generateStudentReport(String format) {
-        StudentReport studentReport = new StudentReport(getFormatter(format));
-        studentReport.generateReport(format);
+        StudentReport studentReport = new StudentReport(getFormatter(format)); // create a new Student Report...
+        studentReport.generateReport(format); // and use the format to generate it
     }
 
     private ReportFormatter getFormatter(String format) {
-        switch (format) {
-            case "csv":
-                return new CSVReportFormatter();
-            case "txt":
-                return new TextReportFormatter();
-            case "console":
-//                TBD
-            default:
-                throw new IllegalArgumentException("BAD FORMAT!: " + format);
+        switch (format) { // get the right formatter based on the format inserted
+            case "csv": // if csv is input...
+                return new CSVReportFormatter(); // use the CSV formatter
+            case "txt": // if txt is input...
+                return new TextReportFormatter(); // use the TXT formatter
+            case "console": // if console is input...
+                return new ConsoleReportFormatter(); // use the console formatter
+            default: // if nothing valid is input...
+                throw new IllegalArgumentException("---\nUnfortunately, no valid formatter was found."); // ...lodge a complaint
         }
     }
 }
