@@ -21,7 +21,7 @@ public class UserDatabase {
 
     public UserDatabase() {
         users = new ArrayList<>(); // array list for users
-        users.add(new Admin(1, "admin", "java")); // The initial admin prescribed in the brief
+        users.add(new Office(1, "admin", "java")); // The initial admin prescribed in the brief
     }
 
     public void addUser(User user) {
