@@ -10,6 +10,7 @@ package ca3_integrated;
 // The Course Report is one of the three *current* varieties of report, with scope to hopefully add more.
 // ------------------
  */
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
