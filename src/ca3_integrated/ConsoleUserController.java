@@ -10,6 +10,7 @@ package ca3_integrated;
 // The ConsoleUserController class is the implementation for the User Controller interface, containing the logic of core login and menu methods.
 // ------------------
  */
+
 public class ConsoleUserController implements UserController {
 
     private LoginView loginView; // This object represents the login interface, which will run the login method, output the login prompt, and run logout.
@@ -47,13 +48,13 @@ public class ConsoleUserController implements UserController {
                         System.out.println("You hold the Lecturer role."); // ...and inform them of their status
                         break;
                     default: // in any other event...
-                        System.out.println("You do not appear to hold a valid role."); // advise the user that they possess no known role
+                        System.out.println("You do not appear to hold a valid role. Whoops!"); // advise the user that they possess no known role
                         continue;
                 }
                 controller.showMenu(user); // Show the respective menu
                 loggedIn = true; // finally, set login status to true to break this loop
             } else {
-                System.out.println("Invalid username or password is invalid. Please try again."); // If the user could not be validated, better luck next time
+                System.out.println("---\nThose credentials are invalid! Please try again."); // If the user could not be validated, better luck next time
             }
         }
     }

@@ -34,36 +34,37 @@ public class StudentReport {
             Connection connection = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD); // connect to the database
             Statement statement = connection.createStatement();
 
-            String studentReportQuery = "SELECT " +
-                    "s.first_name AS First_Name, " +
-                    "s.last_name AS Last_Name, " +
-                    "s.student_number AS Student_Number, " +
-                    "c.course_name AS Course_Name, " +
-                    "GROUP_CONCAT(DISTINCT m.module_name) AS Modules_Enrolled, " +
-                    "GROUP_CONCAT(DISTINCT CONCAT(m_completed.module_name, ' (Grade: ', g.grade, ')')) AS Modules_Completed, " +
-                    "GROUP_CONCAT(DISTINCT m_repeat.module_name) AS Modules_To_Repeat " +
-                    "FROM " +
-                    "students s " +
-                    "JOIN " +
-                    "courses c ON s.course_id = c.course_id " +
-                    "LEFT JOIN " +
-                    "enrollments e ON s.student_id = e.student_id " +
-                    "LEFT JOIN " +
-                    "modules m ON e.module_id = m.module_id " +
-                    "LEFT JOIN " +
-                    "grades g ON e.enrollment_id = g.enrollment_id " +
-                    "LEFT JOIN " +
-                    "(SELECT e.student_id, m.module_name " +
-                    " FROM enrollments e " +
-                    " JOIN modules m ON e.module_id = m.module_id " +
-                    " WHERE e.status = 'Needs to repeat') m_repeat ON s.student_id = m_repeat.student_id " +
-                    "LEFT JOIN " +
-                    "(SELECT e.student_id, m.module_name " +
-                    " FROM enrollments e " +
-                    " JOIN modules m ON e.module_id = m.module_id " +
-                    " WHERE e.status = 'Completed') m_completed ON s.student_id = m_completed.student_id " +
-                    "GROUP BY " +
-                    "s.student_id";
+String studentReportQuery = "SELECT " +
+        "CONCAT(s.first_name, ' ', s.last_name) AS Full_Name, " +
+        "s.student_number AS Student_Number, " +
+        "c.course_name AS Course_Name, " +
+        "GROUP_CONCAT(DISTINCT m.module_name) AS Modules_Enrolled, " +
+        "COALESCE(m_completed.Modules_Completed, 'None') AS Modules_Completed, " +
+        "GROUP_CONCAT(DISTINCT m_repeat.module_name) AS Modules_To_Repeat " +
+    "FROM " +
+        "students s " +
+    "JOIN " +
+        "courses c ON s.course_id = c.course_id " +
+    "LEFT JOIN " +
+        "enrollments e ON s.student_id = e.student_id " +
+    "LEFT JOIN " +
+        "modules m ON e.module_id = m.module_id " +
+    "LEFT JOIN " +
+        "grades g ON e.enrollment_id = g.enrollment_id " +
+    "LEFT JOIN " +
+        "(SELECT e.student_id, GROUP_CONCAT(DISTINCT CONCAT(m.module_name, ' (Grade: ', g.grade, ')')) AS Modules_Completed " +
+         " FROM enrollments e " +
+         " JOIN modules m ON e.module_id = m.module_id " +
+         " JOIN grades g ON e.enrollment_id = g.enrollment_id " +
+         " WHERE e.status = 'Completed' " +
+         " GROUP BY e.student_id) m_completed ON s.student_id = m_completed.student_id " +
+    "LEFT JOIN " +
+        "(SELECT e.student_id, m.module_name " +
+         " FROM enrollments e " +
+         " JOIN modules m ON e.module_id = m.module_id " +
+         " WHERE e.status = 'Needs to repeat') m_repeat ON s.student_id = m_repeat.student_id " +
+    "GROUP BY " +
+        "s.student_id";
     
             ResultSet resultSet = statement.executeQuery(studentReportQuery); // run the above MySQL query
 

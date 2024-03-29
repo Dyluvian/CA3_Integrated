@@ -66,7 +66,8 @@ public class ConsoleReportFormatter implements ReportFormatter {
             for (String[] rowData : dataRows) { // now run through the data
                 System.out.print("|");
                 for (int i = 0; i < columnCount; i++) { // and run through each column
-                    System.out.printf(" %-" + (columnWidths[i]) + "s |", rowData[i]); // and print the adjusted data
+                    String adjustedData = rowData[i].replaceAll(",", ", "); // and add a space after each comma, if there is a comma
+                    System.out.printf(" %-" + (columnWidths[i]) + "s |", adjustedData); // and print the adjusted data
                 }
                 System.out.println(); // ...and keep going...
             }

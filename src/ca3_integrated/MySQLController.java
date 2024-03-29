@@ -7,7 +7,8 @@ package ca3_integrated;
 // ------------------
 // CLASS: MYSQL CONNECTOR
 // ------------------
-// 
+// The MySQL Connector is like Ronseal: it connects the program to MySQL.
+// This code is largely reproduced from material given to us by our lecturer Sam.
 // ------------------
 */
 
@@ -25,16 +26,16 @@ public class MySQLController {
 
     public ResultSet executeQuery(String query) {
         try {
-            Connection connection = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+            Connection connection = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD); // test the above credentials against the database
             Statement statement = connection.createStatement();
             return statement.executeQuery(query);
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("---\nAlas; it's all gone a bit pear-shaped with the database connector! Here is an error message for you: " + e.getMessage());
             return null;
         }
     }
 
-    public void generateReport(ResultSet resultSet, String fileName, ReportFormatter formatter) {
+    public void generateReport(ResultSet resultSet, String fileName, ReportFormatter formatter) { // for generating reports
         formatter.generateReport(resultSet, fileName);
     }
 }

@@ -7,7 +7,7 @@ package ca3_integrated;
 // ------------------
 // INTERFACE: REPORT FORMATTER
 // ------------------
-// 
+// The Report Formatter is the interface linked to the three (current) granular report formatters: CSV, TXT, and Console.
 // ------------------
 */
 
