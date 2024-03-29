@@ -89,7 +89,11 @@ public class StudentReport {
             statement.close();
             connection.close();
         } catch (SQLException e) {
-            e.printStackTrace();
+            if (e.getSQLState().equals("28000")) { // if the credentials do not work...
+                System.out.println("---\nUnfortunately, those database credentials could not be validated."); // take issue
+            } else {
+                e.printStackTrace();
+            }
         }
     }
 }

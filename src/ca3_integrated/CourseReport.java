@@ -9,8 +9,7 @@ package ca3_integrated;
 // ------------------
 // The Course Report is one of the three *current* varieties of report, with scope to hopefully add more.
 // ------------------
-*/
-
+ */
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -34,24 +33,24 @@ public class CourseReport {
             Connection connection = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD); // connect to the database
             Statement statement = connection.createStatement();
 
-            String courseReportQuery = "SELECT " +
-                            "m.module_name AS Module_Name, " +
-                            "c.course_name AS Course_Name, " +
-                            "COUNT(DISTINCT e.student_id) AS Number_of_Students_Enrolled, " +
-                            "CONCAT(l.first_name, ' ', l.last_name) AS Lecturer_Name, " +
-                            "m.room AS Room_Assigned " +
-                        "FROM " +
-                            "modules m " +
-                        "JOIN " +
-                            "courses c ON m.course_id = c.course_id " +
-                        "JOIN " +
-                            "enrollments e ON m.module_id = e.module_id " +
-                        "JOIN " +
-                            "lecturers l ON m.lecturer_id = l.lecturer_id " +
-                        "GROUP BY " +
-                            "m.module_id " +
-                        "ORDER BY " +
-                            "Module_Name";
+            String courseReportQuery = "SELECT "
+                    + "m.module_name AS Module_Name, "
+                    + "c.course_name AS Course_Name, "
+                    + "COUNT(DISTINCT e.student_id) AS Number_of_Students_Enrolled, "
+                    + "CONCAT(l.first_name, ' ', l.last_name) AS Lecturer_Name, "
+                    + "m.room AS Room_Assigned "
+                    + "FROM "
+                    + "modules m "
+                    + "JOIN "
+                    + "courses c ON m.course_id = c.course_id "
+                    + "JOIN "
+                    + "enrollments e ON m.module_id = e.module_id "
+                    + "JOIN "
+                    + "lecturers l ON m.lecturer_id = l.lecturer_id "
+                    + "GROUP BY "
+                    + "m.module_id "
+                    + "ORDER BY "
+                    + "Module_Name";
 
             ResultSet resultSet = statement.executeQuery(courseReportQuery); // run the above MySQL query
 
@@ -77,7 +76,11 @@ public class CourseReport {
             statement.close();
             connection.close();
         } catch (SQLException e) {
-            e.printStackTrace();
+            if (e.getSQLState().equals("28000")) { // if the credentials do not work...
+                System.out.println("---\nUnfortunately, those database credentials could not be validated."); // take issue
+            } else {
+                e.printStackTrace();
+            }
         }
     }
 }
