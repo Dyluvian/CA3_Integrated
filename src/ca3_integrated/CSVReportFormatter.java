@@ -37,7 +37,9 @@ public class CSVReportFormatter implements ReportFormatter {
                 StringBuilder line = new StringBuilder(); // to hold the current line
                 for (int i = 1; i <= columnCount; i++) { // run through each column again
                     String value = resultSet.getString(i); // obtain whatever it says
-                    if (value != null) { // as long as it is not empty data...
+                    if (value == null) {
+                        value = "None"; // null to "None"
+                    } else {
                         value = value.replace("\n", "").replace("\r", ""); // get rid of any stray newlines, this was a problem
                         value = value.replace(",", " + "); // if there are any commas in the input, modify them
                     }

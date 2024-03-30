@@ -1,0 +1,401 @@
+Module Name	Course Name	Number of Students Enrolled	Lecturer Name	Room Assigned
+2D Graphics and Image Processing	Introduction to Computer Graphics	10	Jinrui Mcgougan	Edna O'Brien Art Studio
+3D Modeling and Animation Basics	Introduction to Digital Art	10	Yomna Oleksiak	Brendan Behan Lecture Theatre
+3D Modeling and Rendering Techniques	Introduction to Computer Graphics	10	Jinrui Mcgougan	George Bernard Shaw Debate Hall
+Accounting Principles and Concepts	Financial Accounting Basics	10	Elessio Kogel	Joyce Seminar Room
+Activation Functions and Architectures	Introduction to Artificial Neural Networks	10	Alarick Brodey	Stoker Drama Studio
+Aggregate Demand and Supply	Principles of Macroeconomics	10	Avangelina Nykamp	George Bernard Shaw Debate Hall
+Aging and Development in Adulthood	Developmental Psychology	10	Daown Bearb	Synge Seminar Hall
+Air Pollution Control and Management	Introduction to Environmental Engineering	10	Surayah Bennefeld	Wilde Auditorium
+Airline Operations and Management	Introduction to Aviation Management	10	Anaiis Kremin	Roddy Doyle Creative Writing Corner
+Airport Management and Planning	Introduction to Aviation Management	10	Yamile Colucci	Colum McCann Conference Room
+Algorithm Design and Analysis	Data Structures and Algorithms	10	Jovoni Heiny	Samuel Beckett Experimental Lab
+Alternative Energy Sources and Trends	Introduction to Sustainable Energy	10	Caytlynne Ganun	Online
+Analysis of Contemporary Novels	Contemporary Literature	10	Heather Imperiale	Frank McCourt Drama Studio
+Analytics and Performance Measurement	Social Media Marketing Strategies	10	Akseli Laipple	Banville Biology Lab
+Ancient Egypt and Mesopotamia	History of Ancient Civilizations	10	Vishnu Drapcho	Emma Donoghue Drama Studio
+Ancient Philosophy: From Plato to Aristotle	Introduction to Philosophy	10	Lelaina Curd	Kavanagh Classroom
+Animation and Motion Graphics	Introduction to Computer Graphics	10	Ado Pandy	W.B. Yeats Poetry Room
+Anthropological Approaches	Introduction to Cultural Anthropology	10	Kirra Knode	Edna O'Brien Art Studio
+Anthropological Perspectives	Introduction to Anthropology	10	Kinberly Korman	Thomas Kinsella Poetry Corner
+Applications of Artificial Neural Networks	Introduction to Artificial Neural Networks	10	Jermani Rininger	Clarke Creative Writing Lab
+Applications of Biotechnology in Medicine	Introduction to Biotechnology	10	Azriella Bakker	Jennifer Johnston Library Annex
+Archaeological Methods and Discoveries	Introduction to Anthropology	10	Kinberly Korman	Jennifer Johnston Library Annex
+Archaeological Methods and Techniques	Introduction to Archaeology	10	Sritha Staben	Maeve Binchy Study Center
+Arrays and Linked Lists	Data Structures and Algorithms	10	Arabella-Rose Piekos	Eavan Boland Writing Workshop
+Artificial Intelligence and Robotics	Introduction to Cybernetics	10	Casian Begel	Brian Friel Theater
+Assessment and Evaluation in Education	Introduction to Educational Psychology	10	Alaiya Ghali	Online
+Astrophotography Equipment and Setup	Introduction to Astrophotography	10	Julyana Ysais	Paul Durcan Poetry Corner
+Atmospheric Composition and Structure	Introduction to Atmospheric Science	10	Bruce Av	Mary Lavin Seminar Hall
+Atmospheric Dynamics	Introduction to Atmospheric Science	10	Samir Standingrock	John Banville Art Studio
+Audience Analysis and Adaptation	Public Speaking and Communication	10	Vivaan Guarini	Colum McCann Conference Room
+Audience Targeting and Engagement	Social Media Marketing Strategies	10	Akseli Laipple	Flann O'Brien Lecture Hall
+Aviation Industry Overview and Trends	Introduction to Aviation Management	10	Anaiis Kremin	Eavan Boland Writing Workshop
+Aviation Safety and Regulatory Compliance	Introduction to Aviation Management	10	Yamile Colucci	Samuel Beckett Experimental Lab
+Backend Development with Node.js	Introduction to Web Development	10	Selene Zirkelbach	Synge Seminar Hall
+Basics of Machine Learning Algorithms	Introduction to Machine Learning	10	Dannielle Fixsen	Maeve Binchy Study Center
+Behavioral Economics Principles and Concepts	Introduction to Behavioral Economics	10	Sadeem Lipkowitz	Mary Lavin Seminar Hall
+Behavioral Insights in Policy and Business	Introduction to Behavioral Economics	10	Khallia Blackmore	Online
+Biodiversity Conservation	Global Environmental Issues	10	Kimia Mirzaian	Paul Durcan Poetry Corner
+Biological Anthropology	Introduction to Anthropology	10	Heily Dunnahoe	Dermot Healy Study Area
+Biomass Energy and Biofuels	Introduction to Renewable Energy	10	Karley-Jayne Mccalmont	Banville Biology Lab
+Bioprocessing and Fermentation Technology	Introduction to Biotechnology	10	Maniyah Bohland	Dermot Healy Study Area
+Biopsychosocial Model of Health	Introduction to Health Psychology	10	Aksh Vernet	Emma Donoghue Drama Studio
+Bonding and Molecular Structure	Organic Chemistry Fundamentals	10	Jaylenn Pastoriza	Edna O'Brien Art Studio
+Brain Development and Neuroplasticity	Introduction to Neuroscience	10	Hazely Shuping	Beckett Theater
+Business Ethics in Global Contexts	Business Ethics and Corporate Responsibility	10	Kaicie Dakin	Samuel Beckett Experimental Lab
+Business Intelligence Tools and Applications	Introduction to Business Analytics	10	James-Alan Semanko	Banville Biology Lab
+Business Model Development	Entrepreneurship and Innovation	10	Shabaz Mulcrone	Bowen Library Study Area
+Camera Basics and Exposure Control	Fundamentals of Digital Photography	10	Jaylin Raspante	O'Casey Conference Room
+Cardiovascular and Respiratory Systems	Human Anatomy and Physiology	10	Anahla Fertig	Clarke Creative Writing Lab
+Case Management and Client Advocacy	Introduction to Social Work	10	Yvelisse Nejedly	W.B. Yeats Poetry Room
+Cinematography and Visual Style	Introduction to Film Studies	10	Hixon Goo	Synge Seminar Hall
+Classical Archaeology	Introduction to Archaeology	10	Lucy-Ann Schoemer	Brendan Behan Lecture Theatre
+Classical Greece and Rome	History of Ancient Civilizations	10	Vishnu Drapcho	Dermot Healy Study Area
+Classical Political Thought: Plato to Rousseau	Introduction to Political Philosophy	10	Zhaorong Zumbo	Maeve Binchy Study Center
+Climate Change and Global Warming	Introduction to Atmospheric Science	10	Samir Standingrock	Online
+Climate Change and Mitigation	Global Environmental Issues	10	Kimia Mirzaian	Maeve Binchy Study Center
+Climate Change and Mitigation Strategies	Environmental Science and Sustainability	10	Kenneth-Hugh Acquista	Thomas Kinsella Poetry Corner
+Cognitive Development and Learning Styles	Introduction to Educational Psychology	10	Aron Skarke	Louis MacNeice Music Room
+Cognitive Development in Childhood	Developmental Psychology	10	Paupi-Anais Tidemann	Heaney Poetry Corner
+Cognitive Psychology Fundamentals	Introduction to Cognitive Science	10	Burkley Kocharyan	Edna O'Brien Art Studio
+Color Theory and Application	Introduction to Graphic Design	10	Eleira Zettl	Wilde Auditorium
+Comparative Government Systems	Comparative Politics	10	Harmanveer Baum	Bram Stoker Gothic Library
+Comparative Politics and Governments	Introduction to Political Science	10	Briann Guilin	Joyce Seminar Room
+Composition and Framing Techniques	Fundamentals of Digital Photography	10	Jaylin Raspante	Stoker Drama Studio
+Conservation Biology Management	Principles of Ecology	10	Manna Matsey	John McGahern Classroom
+Consumer Behavior	Principles of Marketing	10	Farhiyo Yarwood	Online
+Consumer Behavior Models	Principles of Microeconomics	10	Nse-Obong Hoffman	Bowen Library Study Area
+Content Creation and Curation	Social Media Marketing Strategies	10	Angelo Vanstavern	Moore Music Room
+Content Marketing Strategies	Introduction to Digital Marketing	10	Bitaniya Palermo	Frank McCourt Drama Studio
+Corporate Social Responsibility	Business Ethics and Corporate Responsibility	10	Ajieadam Dible	Roddy Doyle Creative Writing Corner
+Cosmology and Dark Matter	Introduction to Astrophysics	10	Hanrui Terreros	Wilde Auditorium
+Cosmology and the Universe	Introduction to Space Science	10	Delbert Motlow	W.B. Yeats Poetry Room
+Creative Nonfiction Techniques	The Art of Creative Writing	10	Abdoulmalik Tindol	Synge Seminar Hall
+Crime Scene Investigation	Introduction to Forensic Science	10	Anasia Pfantz	Bowen Library Study Area
+Critical Thinking and Decision Making	Creative Problem Solving	10	Shubhnamdeep Cobb	Banville Biology Lab
+Cross-Cultural Management	International Business Management	10	Xylan Atwell	Colum McCann Conference Room
+Cryptographic Fundamentals	Introduction to Cryptography	10	Huxton Kaemmer	O'Casey Conference Room
+Cryptographic Hash Functions	Introduction to Cryptography	10	Joe-Alexander Dhawan	Clarke Creative Writing Lab
+Cubism and Abstract Expressionism	Modern Art Movements	10	Maxence Kobin	Yeats Lecture Hall
+Cultural Analysis and Interpretation	Introduction to Cultural Studies	10	Miasia Masel	Edna O'Brien Art Studio
+Cultural Diversity	Introduction to Cultural Anthropology	10	Kirra Knode	George Bernard Shaw Debate Hall
+Cultural Geography and Place Identity	Introduction to Human Geography	10	Jac Kimura	Synge Seminar Hall
+Cultural Identity and Representation	Introduction to Cultural Studies	10	Miasia Masel	George Bernard Shaw Debate Hall
+Cultural Influences on Religion	World Religions and Cultures	10	Myleigh-Mo Manly	Brian Friel Theater
+Culture Change and Globalization	Introduction to Cultural Anthropology	10	Wenslow Crowthers	Online
+Cyber Defense Strategies	Introduction to Cybersecurity	10	Keen Romanov	Brian Friel Theater
+Cyber Threats and Vulnerabilities	Introduction to Cybersecurity	10	Rock Tessari	Bram Stoker Gothic Library
+Cybernetic Systems and Control Theory	Introduction to Cybernetics	10	Madhav Schauder	Bram Stoker Gothic Library
+Cybernetics Applications	Introduction to Cybernetics	10	Casian Begel	Sean O'Faolain Seminar Room
+Data Analytics Fundamentals	Introduction to Business Analytics	10	Aleezay Cuentas	Kavanagh Classroom
+Data Visualization and Communication	Introduction to Data Science	10	Ralphie Wetherbee	Banville Biology Lab
+Data Visualization and Interpretation	Introduction to Business Analytics	10	Aleezay Cuentas	Moore Music Room
+Data Wrangling and Preprocessing	Introduction to Data Science	10	Tashi Titel	Kavanagh Classroom
+Decision Making Biases and Heuristics	Introduction to Behavioral Economics	10	Sadeem Lipkowitz	Louis MacNeice Music Room
+Deep Learning and Neural Networks	Introduction to Machine Learning	10	Sibel Cignarella	John McGahern Classroom
+Deep Sky and Planetary Imaging Techniques	Introduction to Astrophotography	10	Rozmin Ganer	John McGahern Classroom
+Descriptive Statistics	Introduction to Probability and Statistics	10	Slevin Tardibuono	Kavanagh Classroom
+Design Principles and Elements	Introduction to Graphic Design	10	Ramiya Schoeck	Yeats Lecture Hall
+Development Policy and Planning	Introduction to Development Studies	10	Israfil Maciak	Louis MacNeice Music Room
+Digital Art Portfolio Development	Introduction to Digital Art	10	Yomna Oleksiak	John McGahern Classroom
+Digital Art Tools and Techniques	Introduction to Digital Art	10	Jaeyleen Scoggin	Maeve Binchy Study Center
+Digital Audio Workstations	Introduction to Music Production	10	Corbin-Blue Pribbernow	Stoker Drama Studio
+Digital Imaging and Adobe Photoshop Basics	Introduction to Graphic Design	10	Eleira Zettl	Beckett Theater
+Digital Marketing Fundamentals	Introduction to Digital Marketing	10	Bitaniya Palermo	Bram Stoker Gothic Library
+Digital Painting and Illustration	Introduction to Digital Art	10	Jaeyleen Scoggin	Paul Durcan Poetry Corner
+Diversity and Social Justice	Introduction to Social Work	10	Yvelisse Nejedly	Online
+Earth Structure and Plate Tectonics	Introduction to Geology	10	Kaidynn Nagele	Kavanagh Classroom
+Ecological Concepts and Interactions	Principles of Ecology	10	Wyllow Bessett	Maeve Binchy Study Center
+Ecosystem Dynamics and Conservation	Environmental Science and Sustainability	10	Nas Pflugh	Emma Donoghue Drama Studio
+Ecosystem Structure and Function	Principles of Ecology	10	Manna Matsey	Brendan Behan Lecture Theatre
+Email Marketing	Introduction to Digital Marketing	10	Farin Timms	Sean O'Faolain Seminar Room
+Energy Efficiency and Conservation	Introduction to Sustainable Energy	10	Dakota-Rose Stegmaier	Louis MacNeice Music Room
+Environmental Chemistry and Biology	Introduction to Environmental Engineering	10	Makalynn Fitzgearld	Yeats Lecture Hall
+Environmental Health and Policy	Introduction to Public Health	10	Kailand Mcilwaine	Thomas Kinsella Poetry Corner
+Environmental Policy and Regulation	Environmental Science and Sustainability	10	Nas Pflugh	Dermot Healy Study Area
+Environmental Sustainability	Introduction to Sustainable Development	10	Aidan-Joseph Stanphill	Heaney Poetry Corner
+Epidemiology and Disease Control	Introduction to Public Health	10	Ernestine Heidman	Dermot Healy Study Area
+Epidemiology and Disease Surveillance	Global Health Issues	10	Maddelyn Headd	Shaw Study Room
+Epistemology and Metaphysics	Introduction to Philosophy	10	Zandaya Wierzbowski	Banville Biology Lab
+Ethical Decision Making in Business	Business Ethics and Corporate Responsibility	10	Ajieadam Dible	Eavan Boland Writing Workshop
+Ethical Hacking and Penetration Testing	Introduction to Cybersecurity	10	Keen Romanov	Sean O'Faolain Seminar Room
+Ethical Issues in Biotechnology	Introduction to Biotechnology	10	Azriella Bakker	Thomas Kinsella Poetry Corner
+Ethical Leadership and Governance	Business Ethics and Corporate Responsibility	10	Kaicie Dakin	Colum McCann Conference Room
+Ethics and Moral Philosophy	Introduction to Philosophy	10	Zandaya Wierzbowski	Flann O'Brien Lecture Hall
+Ethnographic Methods and Fieldwork	Introduction to Cultural Anthropology	10	Wenslow Crowthers	W.B. Yeats Poetry Room
+Ethology and Behavioral Ecology	Introduction to Animal Behavior	10	Kerhys Fensterer	O'Casey Conference Room
+Experimental Writing and Literary Forms	Contemporary Literature	10	Olanrewaju Arthurton	Sean O'Faolain Seminar Room
+Exploratory Data Analysis	Introduction to Data Science	10	Tashi Titel	Moore Music Room
+Fashion Design Fundamentals	Introduction to Fashion Design	10	Souhuyb Horsford	Eavan Boland Writing Workshop
+Fashion Illustration Techniques	Introduction to Fashion Design	10	Souhuyb Horsford	Roddy Doyle Creative Writing Corner
+Fashion Industry Trends	Introduction to Fashion Design	10	Alvi Geho	Samuel Beckett Experimental Lab
+Feedback Mechanisms and Regulation	Introduction to Cybernetics	10	Madhav Schauder	Frank McCourt Drama Studio
+Feminist Political Thought	Modern Political Theory	10	Aayden-James Brinkmeyer	Flann O'Brien Lecture Hall
+Fiction Writing Workshop	The Art of Creative Writing	10	Savva Buter	Shaw Study Room
+Film Theory and Criticism	Introduction to Film Studies	10	Taziyah Oubre	Heaney Poetry Corner
+Financial Analysis and Interpretation	Financial Accounting Basics	10	Briseyda Stevinson	Beckett Theater
+Fiscal Policy and Government Intervention	Principles of Macroeconomics	10	Lukhveer Vassar	W.B. Yeats Poetry Room
+Food Science and Nutrition Technology	Introduction to Human Nutrition	10	Cary Lands	Online
+Forensic Biology and DNA Analysis	Introduction to Forensic Science	10	Millie-Dee Lademann	O'Casey Conference Room
+Forensic Chemistry and Toxicology	Introduction to Forensic Science	10	Millie-Dee Lademann	Stoker Drama Studio
+Forensic Pathology and Ballistics	Introduction to Forensic Science	10	Anasia Pfantz	Clarke Creative Writing Lab
+Frontend Frameworks and Libraries	Introduction to Web Development	10	Selene Zirkelbach	Swift Lecture Theatre
+Galactic Dynamics	Introduction to Astrophysics	10	Kaceton Poke	Joyce Seminar Room
+Game Design Fundamentals	Introduction to Game Design	10	Bahily Perroni	Maeve Binchy Study Center
+Game Mechanics	Introduction to Game Design	10	Bahily Perroni	Paul Durcan Poetry Corner
+Game Prototyping and Playtesting	Introduction to Game Design	10	Junhee Lauderman	John McGahern Classroom
+Genetic Engineering and Biotechnology	Principles of Genetics	10	Rashon Gothberg	Swift Lecture Theatre
+Genome Annotation Methods	Introduction to Bioinformatics	10	Julina Strianese	John Banville Art Studio
+Genre Studies: Drama and Comedy	Introduction to Film Studies	10	Hixon Goo	Swift Lecture Theatre
+Geographic Concepts and Themes	Introduction to Human Geography	10	Yakup Corradetti	Shaw Study Room
+Geologic Hazards and Natural Resources	Introduction to Geology	10	Arturs Patoine	Banville Biology Lab
+Geologic Time and Stratigraphy	Introduction to Geology	10	Arturs Patoine	Flann O'Brien Lecture Hall
+Global Business Environment and Trends	International Business Management	10	Kelton Nieh	Eavan Boland Writing Workshop
+Global Governance and Diplomacy	Introduction to International Relations	10	Avacyn Zemo	Samuel Beckett Experimental Lab
+Global Health Inequalities	Global Health Issues	10	Maddelyn Headd	Heaney Poetry Corner
+Globalization and Cultural Diversity	Introduction to Cultural Studies	10	Sibby Marlen	Online
+Globalization and Development	Introduction to Development Studies	10	Finlee Eagan	John Banville Art Studio
+Harmony and Chord Progressions	Music Theory and Composition	10	Anyely Lodrigue	Roddy Doyle Creative Writing Corner
+Health Behavior and Lifestyle Changes	Introduction to Health Psychology	10	Donal Angel	Jennifer Johnston Library Annex
+Health Data Standards and Interoperability	Introduction to Health Informatics	10	Morena Meholick	Dermot Healy Study Area
+Health Informatics Applications	Introduction to Health Informatics	10	Graycen Prewit	Jennifer Johnston Library Annex
+Health Information Systems	Introduction to Health Informatics	10	Morena Meholick	Emma Donoghue Drama Studio
+Health Promotion and Education	Introduction to Public Health	10	Kailand Mcilwaine	Jennifer Johnston Library Annex
+Healthcare Analytics	Introduction to Health Informatics	10	Graycen Prewit	Thomas Kinsella Poetry Corner
+Healthcare Systems and Policies Worldwide	Global Health Issues	10	Taytum Felz	Synge Seminar Hall
+Historical Archaeology and Urban Studies	Introduction to Archaeology	10	Lucy-Ann Schoemer	John McGahern Classroom
+History of Cinema	Introduction to Film Studies	10	Taziyah Oubre	Shaw Study Room
+Host-Pathogen Interactions and Disease	Principles of Microbiology	10	Nevada Wesemann	Beckett Theater
+HRM Functions and Roles	Introduction to Human Resource Management	10	Berry Chopra	Edna O'Brien Art Studio
+HTML and CSS Fundamentals	Introduction to Web Development	10	Raynie Bisho	Shaw Study Room
+Human Factors and Ergonomics Principles	Introduction to Human Factors Engineering	10	Kayline Schay	Shaw Study Room
+Human Factors in Computing	Introduction to Human Computer Interaction	10	Shanzay Kalata	Beckett Theater
+Human Factors in Product Design and Safety	Introduction to Human Factors Engineering	10	Brok Shteyman	Synge Seminar Hall
+Human Rights Theory and Philosophy	Human Rights and Social Justice	10	Mieszko Somppi	Maeve Binchy Study Center
+Human-Computer Interaction Design	Introduction to Human Factors Engineering	10	Kayline Schay	Heaney Poetry Corner
+Hydropower and Ocean Energy	Introduction to Renewable Energy	10	Karley-Jayne Mccalmont	Flann O'Brien Lecture Hall
+Ideation and Opportunity Recognition	Entrepreneurship and Innovation	10	Taimur Biggers	Stoker Drama Studio
+Ideation Techniques and Brainstorming	Creative Problem Solving	10	Saulius Soike	Moore Music Room
+Image Acquisition and Processing	Introduction to Astrophotography	10	Rozmin Ganer	Brendan Behan Lecture Theatre
+Image Editing and Post-Processing	Fundamentals of Digital Photography	10	Prathik Alvidrez	Bowen Library Study Area
+Implications of Nanotechnology	Introduction to Nanotechnology	10	Lisa-Marie Malta	Thomas Kinsella Poetry Corner
+Indus Valley Civilization	History of Ancient Civilizations	10	Xiana Roux	Jennifer Johnston Library Annex
+Infectious Disease Control and Prevention	Global Health Issues	10	Taytum Felz	Swift Lecture Theatre
+Innovation Management and Strategy	Entrepreneurship and Innovation	10	Shabaz Mulcrone	Clarke Creative Writing Lab
+Interaction Design Methods	Introduction to Human Computer Interaction	10	Elye Fitzharris	Joyce Seminar Room
+International Business Law and Ethics	International Business Management	10	Xylan Atwell	Samuel Beckett Experimental Lab
+International Market Entry Strategies	International Business Management	10	Kelton Nieh	Roddy Doyle Creative Writing Corner
+International Political Economy	Introduction to International Relations	10	Avacyn Zemo	Colum McCann Conference Room
+International Relations and Global Politics	Introduction to Political Science	10	Asir Qaqish	Wilde Auditorium
+International Security and Conflict Resolution	Introduction to International Relations	10	Javan Litterini	Roddy Doyle Creative Writing Corner
+Intersectionality	Human Rights and Social Justice	10	Iowa Bogatz	John McGahern Classroom
+Introduction to AI and Machine Learning	Introduction to Artificial Intelligence	10	Mykolas Lessner	Maeve Binchy Study Center
+Introduction to Astronomy	Introduction to Astrophotography	10	Julyana Ysais	Maeve Binchy Study Center
+Introduction to Astronomy and Astrophysics	Introduction to Space Science	10	Almuthanna Ferlito	Edna O'Brien Art Studio
+Introduction to Biological Databases	Introduction to Bioinformatics	10	Leilanni Barbian	Mary Lavin Seminar Hall
+Introduction to Cultural Anthropology	Introduction to Anthropology	10	Heily Dunnahoe	Emma Donoghue Drama Studio
+Introduction to Entrepreneurship	Entrepreneurship and Innovation	10	Taimur Biggers	O'Casey Conference Room
+Introduction to Financial Statements	Financial Accounting Basics	10	Elessio Kogel	Yeats Lecture Hall
+Introduction to Genetic Engineering	Introduction to Biotechnology	10	Maniyah Bohland	Emma Donoghue Drama Studio
+Introduction to Human Anatomy	Human Anatomy and Physiology	10	Keri Haggins	O'Casey Conference Room
+Inventory Management	Introduction to Operations Management	10	Lyna Didlake	Flann O'Brien Lecture Hall
+Investment Strategies and Management	Introduction to Financial Planning	10	Prestina Sentz	Joyce Seminar Room
+JavaScript Programming Basics	Introduction to Web Development	10	Raynie Bisho	Heaney Poetry Corner
+Knowledge Representation	Introduction to Artificial Intelligence	10	Naly Lingar	Brendan Behan Lecture Theatre
+Language and Thought	Introduction to Cognitive Science	10	Darielle Macioch	Online
+Language Processing	Introduction to Cognitive Psychology	10	Tsion Kirckof	Brian Friel Theater
+Leadership and Management Styles	Introduction to Organizational Psychology	10	Bahy Tippens	Dermot Healy Study Area
+Learning and Cognition in Animals	Introduction to Animal Behavior	10	Amelia-Skye Burnfield	Bowen Library Study Area
+Learning Theories	Introduction to Educational Psychology	10	Aron Skarke	Mary Lavin Seminar Hall
+Legal Frameworks for Human Rights	Human Rights and Social Justice	10	Iowa Bogatz	Brendan Behan Lecture Theatre
+Liberalism and Democracy	Modern Political Theory	10	Auri Sowieja	Kavanagh Classroom
+Libertarianism	Introduction to Political Philosophy	10	Quantavius Pronesti	Brendan Behan Lecture Theatre
+Lighting and Portrait Photography	Fundamentals of Digital Photography	10	Prathik Alvidrez	Clarke Creative Writing Lab
+Literary Movements	Contemporary Literature	10	Heather Imperiale	Bram Stoker Gothic Library
+Machine Learning Algorithms	Introduction to Data Science	10	Ralphie Wetherbee	Flann O'Brien Lecture Hall
+Macroeconomic Implications	Principles of Microeconomics	10	Nse-Obong Hoffman	Clarke Creative Writing Lab
+Macroeconomic Indicators and Measures	Principles of Macroeconomics	10	Avangelina Nykamp	Edna O'Brien Art Studio
+Macronutrients and Micronutrients	Introduction to Human Nutrition	10	Jadalla Arand	George Bernard Shaw Debate Hall
+Major World Religions Overview	World Religions and Cultures	10	Hatem Townsel	Bram Stoker Gothic Library
+Marine Biotechnology	Introduction to Marine Biology	10	Gaddiel Crookston	Sean O'Faolain Seminar Room
+Marine Conservation and Management	Introduction to Marine Biology	10	Gaddiel Crookston	Brian Friel Theater
+Marine Ecosystems and Biodiversity	Introduction to Marine Biology	10	Kylieanna Caskie	Bram Stoker Gothic Library
+Market Segmentation and Targeting	Principles of Marketing	10	Holt Lobstein	Louis MacNeice Music Room
+Market Structures and Competition	Principles of Microeconomics	10	Yehuda Yielding	Stoker Drama Studio
+Marketing Concepts and Strategies	Principles of Marketing	10	Holt Lobstein	Mary Lavin Seminar Hall
+Marketing Mix: Product,  Place,  Promotion	Principles of Marketing	10	Farhiyo Yarwood	John Banville Art Studio
+Marxism	Introduction to Political Philosophy	10	Quantavius Pronesti	John McGahern Classroom
+Marxism and Socialism	Modern Political Theory	10	Auri Sowieja	Moore Music Room
+Melody Writing and Counterpoint	Music Theory and Composition	10	Naava Artis	Colum McCann Conference Room
+Memory and Forgetting	Introduction to Cognitive Psychology	10	Bayne Boyll	Bram Stoker Gothic Library
+Memory and Learning	Introduction to Cognitive Science	10	Darielle Macioch	W.B. Yeats Poetry Room
+Mendelian Genetics	Principles of Genetics	10	Romualdo Litel	Shaw Study Room
+Mesoamerican Cultures	History of Ancient Civilizations	10	Xiana Roux	Thomas Kinsella Poetry Corner
+Microbial Genetics and Biotechnology	Principles of Microbiology	10	Nevada Wesemann	Wilde Auditorium
+Microbial Growth and Metabolism	Principles of Microbiology	10	Elleen Kuest	Joyce Seminar Room
+Microbial Structure and Function	Principles of Microbiology	10	Elleen Kuest	Yeats Lecture Hall
+Minerals and Rocks	Introduction to Geology	10	Kaidynn Nagele	Moore Music Room
+Mixing and Mastering	Introduction to Music Production	10	Giric Holtzen	Clarke Creative Writing Lab
+Mobile App Development Platforms	Introduction to Mobile App Development	10	Cortney Vaitkus	Emma Donoghue Drama Studio
+Mobile App Programming Languages (e.g.	Introduction to Mobile App Development	10	Laicee Ricciardo	Jennifer Johnston Library Annex
+Mobile App Testing and Deployment	Introduction to Mobile App Development	10	Laicee Ricciardo	Thomas Kinsella Poetry Corner
+Modern Philosophy: Descartes to Kant	Introduction to Philosophy	10	Lelaina Curd	Moore Music Room
+Modern Political Theory: Kant to Rawls	Introduction to Political Philosophy	10	Zhaorong Zumbo	Paul Durcan Poetry Corner
+Molecular Genetics and DNA Structure	Principles of Genetics	10	Romualdo Litel	Heaney Poetry Corner
+Monetary Policy and Central Banking	Principles of Macroeconomics	10	Lukhveer Vassar	Online
+Motivation and Classroom Management	Introduction to Educational Psychology	10	Alaiya Ghali	John Banville Art Studio
+Motivation and Job Satisfaction	Introduction to Organizational Psychology	10	Yoftana Fogus	Jennifer Johnston Library Annex
+Musculoskeletal System Function	Human Anatomy and Physiology	10	Anahla Fertig	Bowen Library Study Area
+Music Arrangement	Introduction to Music Production	10	Giric Holtzen	Bowen Library Study Area
+Music Notation and Basic Theory	Music Theory and Composition	10	Anyely Lodrigue	Eavan Boland Writing Workshop
+Music Technology	Introduction to Music Production	10	Corbin-Blue Pribbernow	O'Casey Conference Room
+Nanoelectronics and Nanodevices	Introduction to Nanotechnology	10	Momolaoluwa Ockenfels	Dermot Healy Study Area
+Nanomaterials Synthesis and Characterization	Introduction to Nanotechnology	10	Momolaoluwa Ockenfels	Emma Donoghue Drama Studio
+Nanomedicine and Biomedical Applications	Introduction to Nanotechnology	10	Lisa-Marie Malta	Jennifer Johnston Library Annex
+Natural Language Processing	Introduction to Artificial Intelligence	10	Naly Lingar	John McGahern Classroom
+Network Security and Cryptography	Introduction to Cybersecurity	10	Rock Tessari	Frank McCourt Drama Studio
+Neural Networks and Neurons	Introduction to Artificial Neural Networks	10	Alarick Brodey	O'Casey Conference Room
+Neural Structure and Function	Introduction to Neuroscience	10	Makya Lap	Yeats Lecture Hall
+Neurotransmission and Synaptic Plasticity	Introduction to Neuroscience	10	Makya Lap	Joyce Seminar Room
+Nutrient Requirements	Introduction to Human Nutrition	10	Jadalla Arand	Edna O'Brien Art Studio
+Nutrition and Health Promotion	Introduction to Human Nutrition	10	Cary Lands	W.B. Yeats Poetry Room
+Oceanography	Introduction to Marine Biology	10	Kylieanna Caskie	Frank McCourt Drama Studio
+Operations Strategy and Competitive Advantage	Introduction to Operations Management	10	Jaiel Bemus	Kavanagh Classroom
+Organic Synthesis Strategies	Organic Chemistry Fundamentals	10	Sandis Acy	Online
+Organizational Behavior and Culture	Introduction to Organizational Psychology	10	Bahy Tippens	Emma Donoghue Drama Studio
+Organizational Change and Development	Introduction to Organizational Psychology	10	Yoftana Fogus	Thomas Kinsella Poetry Corner
+Perception and Attention	Introduction to Cognitive Science	10	Burkley Kocharyan	George Bernard Shaw Debate Hall
+Perception and Attention	Introduction to Cognitive Psychology	10	Bayne Boyll	Frank McCourt Drama Studio
+Performance Management and Appraisal	Introduction to Human Resource Management	10	Mesake Bocock	Online
+Personal Finance Basics	Introduction to Financial Planning	10	Prestina Sentz	Yeats Lecture Hall
+Perspectives on Animal Behavior	Introduction to Animal Behavior	10	Amelia-Skye Burnfield	Clarke Creative Writing Lab
+Persuasive Speaking Techniques	Public Speaking and Communication	10	Vivaan Guarini	Samuel Beckett Experimental Lab
+Physiology of the Nervous System	Human Anatomy and Physiology	10	Keri Haggins	Stoker Drama Studio
+Poetry and Prose Analysis	The Art of Creative Writing	10	Savva Buter	Heaney Poetry Corner
+Policy Analysis Methods and Tools	Introduction to Public Policy Analysis	10	Kleopatra Caramico	Stoker Drama Studio
+Policy Evaluation and Impact Assessment	Introduction to Public Policy Analysis	10	Euthymia Vislosky	Bowen Library Study Area
+Policy Implementation and Public Administration	Introduction to Public Policy Analysis	10	Euthymia Vislosky	Clarke Creative Writing Lab
+Policy Process and Policy Cycle	Introduction to Public Policy Analysis	10	Kleopatra Caramico	O'Casey Conference Room
+Political Culture and Participation	Comparative Politics	10	Luca-Scott Thogersen	Brian Friel Theater
+Political Economy and Development	Comparative Politics	10	Luca-Scott Thogersen	Sean O'Faolain Seminar Room
+Political Institutions and Processes	Comparative Politics	10	Harmanveer Baum	Frank McCourt Drama Studio
+Political Theory and Ideologies	Introduction to Political Science	10	Briann Guilin	Yeats Lecture Hall
+Pollution Control Strategies	Global Environmental Issues	10	Elthaea Gielen	Brendan Behan Lecture Theatre
+Pop Art and Op Art	Modern Art Movements	10	Manjeevan Hirayama	Wilde Auditorium
+Popular Culture and Media Studies	Introduction to Cultural Studies	10	Sibby Marlen	W.B. Yeats Poetry Room
+Population Dynamics and Ecology	Principles of Ecology	10	Wyllow Bessett	Paul Durcan Poetry Corner
+Population Genetics and Biology	Principles of Genetics	10	Rashon Gothberg	Synge Seminar Hall
+Population Geography and Migration	Introduction to Human Geography	10	Yakup Corradetti	Heaney Poetry Corner
+Postcolonial Literature and Global Voices	Contemporary Literature	10	Olanrewaju Arthurton	Brian Friel Theater
+Postcolonial Perspectives	Modern Political Theory	10	Aayden-James Brinkmeyer	Banville Biology Lab
+Postmodernism and Contemporary Art	Modern Art Movements	10	Manjeevan Hirayama	Beckett Theater
+Predictive Analytics and Forecasting	Introduction to Business Analytics	10	James-Alan Semanko	Flann O'Brien Lecture Hall
+Prehistoric Archaeology	Introduction to Archaeology	10	Sritha Staben	Paul Durcan Poetry Corner
+Prenatal Development	Developmental Psychology	10	Paupi-Anais Tidemann	Shaw Study Room
+Probability Distributions	Introduction to Probability and Statistics	10	Slevin Tardibuono	Moore Music Room
+Problem Identification and Definition	Creative Problem Solving	10	Saulius Soike	Kavanagh Classroom
+Problem Solving and Decision Making	Introduction to Cognitive Psychology	10	Tsion Kirckof	Sean O'Faolain Seminar Room
+Process Design and Analysis	Introduction to Operations Management	10	Jaiel Bemus	Moore Music Room
+Prospect Theory and Risk Perception	Introduction to Behavioral Economics	10	Khallia Blackmore	John Banville Art Studio
+Psychological Aspects of Recovery	Introduction to Health Psychology	10	Donal Angel	Thomas Kinsella Poetry Corner
+Public Health History and Concepts	Introduction to Public Health	10	Ernestine Heidman	Emma Donoghue Drama Studio
+Public Key Cryptography and RSA	Introduction to Cryptography	10	Joe-Alexander Dhawan	Bowen Library Study Area
+Public Policy Analysis and Governance	Introduction to Political Science	10	Asir Qaqish	Beckett Theater
+Quality Management and Lean Operations	Introduction to Operations Management	10	Lyna Didlake	Banville Biology Lab
+Quantum Mechanics in Everyday Life	Introduction to Quantum Mechanics	10	Chanaide Catic	Online
+Quantum Physics Fundamentals	Introduction to Quantum Mechanics	10	Janael Vandersnick	Mary Lavin Seminar Hall
+Quantum States and Wavefunctions	Introduction to Quantum Mechanics	10	Chanaide Catic	John Banville Art Studio
+Reaction Mechanisms	Organic Chemistry Fundamentals	10	Sandis Acy	W.B. Yeats Poetry Room
+Recording Transactions	Financial Accounting Basics	10	Briseyda Stevinson	Wilde Auditorium
+Recruitment and Selection Processes	Introduction to Human Resource Management	10	Berry Chopra	George Bernard Shaw Debate Hall
+Regression Analysis and Correlation	Introduction to Probability and Statistics	10	Wise Bendik	Banville Biology Lab
+Religion and Society	World Religions and Cultures	10	Myleigh-Mo Manly	Sean O'Faolain Seminar Room
+Religious Practices and Rituals	World Religions and Cultures	10	Hatem Townsel	Frank McCourt Drama Studio
+Renewable Energy Technologies	Introduction to Sustainable Energy	10	Dakota-Rose Stegmaier	Mary Lavin Seminar Hall
+Retirement Planning and Wealth Management	Introduction to Financial Planning	10	Shmookh Ehnot	Wilde Auditorium
+Robot Control and Motion Planning	Introduction to Robotics Programming	10	Degmo Awe	Brian Friel Theater
+Robot Control Systems	Introduction to Robotics	10	Thallon Mcniel	John Banville Art Studio
+Robot Control Systems	Introduction to Robotics Engineering	10	Riggin Crespin	John Banville Art Studio
+Robot Kinematics and Dynamics	Introduction to Robotics Engineering	10	Jennarae Nared	Louis MacNeice Music Room
+Robot Kinematics and Dynamics	Introduction to Robotics Programming	10	Aviela Choates	Frank McCourt Drama Studio
+Robot Operating Systems	Introduction to Robotics Programming	10	Aviela Choates	Bram Stoker Gothic Library
+Robot Perception and Localization	Introduction to Robotics Engineering	10	Riggin Crespin	Online
+Robot Perception and Localization	Introduction to Robotics Programming	10	Degmo Awe	Sean O'Faolain Seminar Room
+Robot Programming and Simulation	Introduction to Robotics	10	Thallon Mcniel	Online
+Robotic Kinematics	Introduction to Robotics	10	Yarielis Baraniak	Mary Lavin Seminar Hall
+Robotics Fundamentals and Components	Introduction to Robotics Engineering	10	Jennarae Nared	Mary Lavin Seminar Hall
+Screenwriting Fundamentals	The Art of Creative Writing	10	Abdoulmalik Tindol	Swift Lecture Theatre
+Search and Optimization Algorithms	Introduction to Artificial Intelligence	10	Mykolas Lessner	Paul Durcan Poetry Corner
+Search Engine Optimization	Introduction to Digital Marketing	10	Farin Timms	Brian Friel Theater
+Sensors and Actuators	Introduction to Robotics	10	Yarielis Baraniak	Louis MacNeice Music Room
+Sensory Systems and Perception	Introduction to Neuroscience	10	Hazely Shuping	Wilde Auditorium
+Sequence Alignment and Analysis	Introduction to Bioinformatics	10	Leilanni Barbian	Louis MacNeice Music Room
+Social and Emotional Development	Developmental Psychology	10	Daown Bearb	Swift Lecture Theatre
+Social Behavior and Communication	Introduction to Animal Behavior	10	Kerhys Fensterer	Stoker Drama Studio
+Social Equity and Economic Development	Introduction to Sustainable Development	10	Yudith Simm	Swift Lecture Theatre
+Social Justice Movements and Advocacy	Human Rights and Social Justice	10	Mieszko Somppi	Paul Durcan Poetry Corner
+Social Media Platforms Overview	Social Media Marketing Strategies	10	Angelo Vanstavern	Kavanagh Classroom
+Social Stratification and Inequality	Introduction to Sociology	10	Logic Keeven	Heaney Poetry Corner
+Social Welfare Policies and Services	Introduction to Social Work	10	Saivon Laribee	George Bernard Shaw Debate Hall
+Social Work History and Profession	Introduction to Social Work	10	Saivon Laribee	Edna O'Brien Art Studio
+Sociological Perspectives and Theories	Introduction to Sociology	10	Logic Keeven	Shaw Study Room
+Sociology of Culture and Media	Introduction to Sociology	10	Zaniyah Dubry	Swift Lecture Theatre
+Sociology of Gender and Sexuality	Introduction to Sociology	10	Zaniyah Dubry	Synge Seminar Hall
+Solar Energy Technologies and Applications	Introduction to Renewable Energy	10	Chiburuoma Mcilhaney	Kavanagh Classroom
+Solar System Exploration	Introduction to Astrophysics	10	Hanrui Terreros	Beckett Theater
+Solar System Exploration	Introduction to Space Science	10	Almuthanna Ferlito	George Bernard Shaw Debate Hall
+Solid Waste Management and Recycling	Introduction to Environmental Engineering	10	Surayah Bennefeld	Beckett Theater
+Solution Generation and Prototyping	Creative Problem Solving	10	Shubhnamdeep Cobb	Flann O'Brien Lecture Hall
+Song Arrangement	Music Theory and Composition	10	Naava Artis	Samuel Beckett Experimental Lab
+Sorting and Searching Techniques	Data Structures and Algorithms	10	Jovoni Heiny	Colum McCann Conference Room
+Space Technology and Exploration Missions	Introduction to Space Science	10	Delbert Motlow	Online
+Speech Preparation and Organization	Public Speaking and Communication	10	Jaela Kuhfahl	Eavan Boland Writing Workshop
+Statistical Inference	Introduction to Probability and Statistics	10	Wise Bendik	Flann O'Brien Lecture Hall
+Stellar Evolution	Introduction to Astrophysics	10	Kaceton Poke	Yeats Lecture Hall
+Stereochemistry and Isomerism	Organic Chemistry Fundamentals	10	Jaylenn Pastoriza	George Bernard Shaw Debate Hall
+Storytelling and Narrative Design	Introduction to Game Design	10	Junhee Lauderman	Brendan Behan Lecture Theatre
+Stress and Coping Mechanisms	Introduction to Health Psychology	10	Aksh Vernet	Dermot Healy Study Area
+Structural Bioinformatics Techniques	Introduction to Bioinformatics	10	Julina Strianese	Online
+Supervised Learning Techniques	Introduction to Machine Learning	10	Dannielle Fixsen	Paul Durcan Poetry Corner
+Supply and Demand Analysis	Principles of Microeconomics	10	Yehuda Yielding	O'Casey Conference Room
+Surrealism and Dadaism	Modern Art Movements	10	Maxence Kobin	Joyce Seminar Room
+Sustainable Cities and Smart Growth	Introduction to Urban Planning	10	Lizandra Mooneyhan	Samuel Beckett Experimental Lab
+Sustainable Development Goals	Introduction to Sustainable Development	10	Aidan-Joseph Stanphill	Shaw Study Room
+Sustainable Development Goals (SDGs)	Introduction to Development Studies	10	Finlee Eagan	Online
+Sustainable Development Practices	Global Environmental Issues	10	Elthaea Gielen	John McGahern Classroom
+Sustainable Development Practices	Environmental Science and Sustainability	10	Kenneth-Hugh Acquista	Jennifer Johnston Library Annex
+Sustainable Energy Policy and Economics	Introduction to Sustainable Energy	10	Caytlynne Ganun	John Banville Art Studio
+Sustainable Urban Planning and Design	Introduction to Sustainable Development	10	Yudith Simm	Synge Seminar Hall
+Symmetric Encryption Algorithms	Introduction to Cryptography	10	Huxton Kaemmer	Stoker Drama Studio
+System Design and Modeling Techniques	Introduction to Systems Engineering	10	Tiyon Marusa	Colum McCann Conference Room
+System Integration and Validation	Introduction to Systems Engineering	10	Tiyon Marusa	Samuel Beckett Experimental Lab
+System Requirements and Specification	Introduction to Systems Engineering	10	Karsin Lond	Roddy Doyle Creative Writing Corner
+Systems and Engineering Principles	Introduction to Systems Engineering	10	Karsin Lond	Eavan Boland Writing Workshop
+Tax Planning and Estate Planning	Introduction to Financial Planning	10	Shmookh Ehnot	Beckett Theater
+Textiles and Materials	Introduction to Fashion Design	10	Alvi Geho	Colum McCann Conference Room
+The Age of Enlightenment	Modern European History	10	Locklan Mull	Frank McCourt Drama Studio
+The Renaissance and Reformation	Modern European History	10	Locklan Mull	Bram Stoker Gothic Library
+The Rise of Nationalism	Modern European History	10	Katja Corkin	Brian Friel Theater
+Theories of Development	Introduction to Development Studies	10	Israfil Maciak	Mary Lavin Seminar Hall
+Theories of International Relations	Introduction to International Relations	10	Javan Litterini	Eavan Boland Writing Workshop
+Training Algorithms: Backpropagation	Introduction to Artificial Neural Networks	10	Jermani Rininger	Bowen Library Study Area
+Training and Development Strategies	Introduction to Human Resource Management	10	Mesake Bocock	W.B. Yeats Poetry Room
+Transportation Planning and Infrastructure	Introduction to Urban Planning	10	Lizandra Mooneyhan	Colum McCann Conference Room
+Trees and Graphs	Data Structures and Algorithms	10	Arabella-Rose Piekos	Roddy Doyle Creative Writing Corner
+Typography and Layout Design	Introduction to Graphic Design	10	Ramiya Schoeck	Joyce Seminar Room
+Unsupervised Learning and Clustering	Introduction to Machine Learning	10	Sibel Cignarella	Brendan Behan Lecture Theatre
+Urban Design Principles and Strategies	Introduction to Urban Planning	10	Zikachimra Scheve	Roddy Doyle Creative Writing Corner
+Urban Geography and Settlement Patterns	Introduction to Human Geography	10	Jac Kimura	Swift Lecture Theatre
+Urbanization and Urban Development Patterns	Introduction to Urban Planning	10	Zikachimra Scheve	Eavan Boland Writing Workshop
+Usability Engineering and User Experience	Introduction to Human Factors Engineering	10	Brok Shteyman	Swift Lecture Theatre
+Usability Testing and Evaluation	Introduction to Human Computer Interaction	10	Shanzay Kalata	Wilde Auditorium
+User Interface Design for Mobile Apps	Introduction to Mobile App Development	10	Cortney Vaitkus	Dermot Healy Study Area
+User Interface Design Principles	Introduction to Human Computer Interaction	10	Elye Fitzharris	Yeats Lecture Hall
+Verbal and Nonverbal Communication	Public Speaking and Communication	10	Jaela Kuhfahl	Roddy Doyle Creative Writing Corner
+Virtual Reality and Augmented Reality	Introduction to Computer Graphics	10	Ado Pandy	Online
+Water and Wastewater Treatment	Introduction to Environmental Engineering	10	Makalynn Fitzgearld	Joyce Seminar Room
+Wave-Particle Duality	Introduction to Quantum Mechanics	10	Janael Vandersnick	Louis MacNeice Music Room
+Weather Phenomena and Climate Patterns	Introduction to Atmospheric Science	10	Bruce Av	Louis MacNeice Music Room
+Wind Energy: Generation and Integration	Introduction to Renewable Energy	10	Chiburuoma Mcilhaney	Moore Music Room
+World Wars and the Cold War Era	Modern European History	10	Katja Corkin	Sean O'Faolain Seminar Room

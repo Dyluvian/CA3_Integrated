@@ -32,28 +32,30 @@ public class TextReportFormatter implements ReportFormatter {
             }
 
             for (int i = 1; i <= columnCount; i++) { // run through each column again
-                String columnHeader = metaData.getColumnLabel(i).replace("_", " "); // repeat the same process: get header text and remove underscores
-                writer.printf("%-" + (columnWidths[i - 1]) + "s", columnHeader); // now print the headers to align with the widths
+                String columnHeader = metaData.getColumnLabel(i).replace("_", " "); // obtain the headers of each column, without underscores
+                columnHeader = columnHeader.trim(); // trim the column header
+                writer.print(columnHeader); // now print the trimmed column header
                 if (i < columnCount) { // if it's not the final column...
                     writer.print("\t"); // add a tab
                 }
             }
             writer.println(); // then continue
 
-            while (resultSet.next()) { //
-                for (int i = 1; i <= columnCount; i++) { // run through each column again
-                    String data = resultSet.getString(i); // obtain whatever it says
-                    if (data == null) { // if it says nothing...
-                        data = "None"; // set the output to "None" to avoid nullpointer exception
+            while (resultSet.next()) { // iterate over the result set
+                for (int i = 1; i <= columnCount; i++) { // iterate over each column in the current row
+                    String data = resultSet.getString(i); // obtain data from the current column
+                    if (data == null) { // if the data is null...
+                        data = "None"; // set it to "None"
                     } else {
-                        data = data.trim(); // otherwise, clean up by removing any useless characters
+                        data = data.trim(); // trim the data
+                        data = data.replace(",", ", "); // add a space after each comma
                     }
-                    writer.printf("%-" + (columnWidths[i - 1]) + "s", data); // now print the data with some aesthetic tweaks
+                    writer.print(data); // print the data
                     if (i < columnCount) { // if it's not the final column...
-                        writer.print("\t"); //  add a tab
+                        writer.print("\t"); // add a tab
                     }
                 }
-                writer.println(); // continue on, until...
+                writer.println(); // move to the next line for the next row
             }
 
             System.out.println("---\nExcellent! The report has been saved as " + filename + "."); // ...we're done

@@ -10,8 +10,8 @@ package ca3_integrated;
 // This class delves into the unique functionalities assigned to the Lecturer role, beyond the generic user coverage of the main User Controller.
 // Specifically, it enables the Lecturer to view a Lecturer Report, modify their own username and password, log out, and close the program.
 // ------------------
-*/
-
+ */
+import java.util.InputMismatchException;
 import java.util.Scanner; // import Scanner for accepting user input
 
 public class LecturerController implements UserController {
@@ -21,88 +21,93 @@ public class LecturerController implements UserController {
     public LecturerController(UserDatabase userDatabase) {
         this.userDatabase = userDatabase; // relate the AdminController to the database
     }
-    
+
     @Override
     public void login() { // Standard login
     }
-    
+
     @Override
     public void showMenu(User user) {
         if (user instanceof Lecturer) { // if the user is a Lecturer...
             showLecturerMenu((Lecturer) user); // ...show the Lecturer menu
         }
     }
-    
+
     public void showLecturerMenu(Lecturer lecturer) {
         Scanner scanner = new Scanner(System.in); // kickstart the scanner
         int choice; // initialise the choice integer for switch
         do {
-            System.out.println("---\nInput 1 to generate a Lecturer report.\nInput 2 to change your username and password.\nInput 3 to log out.\nInput 4 to close the software.\n---"); // instructions
-            choice = scanner.nextInt(); // next int inserted defines your choice
-            switch (choice) {
+            try {
+                System.out.println("---\nInput 1 to generate a Lecturer report.\nInput 2 to change your username and password.\nInput 3 to log out.\nInput 4 to close the software.\n---"); // instructions
+                choice = scanner.nextInt(); // next int inserted defines your choice
+                switch (choice) {
 // TO GENERATE A LECTURER REPORT
-                case 1: // if you input 1...
-                    System.out.println("---\nAcknowledged. Now, choose your format.\nInput 1 to output the report in CSV format.\nInput 2 to output it in TXT format.\nInput 3 to print the output to the console.\n---");
-                    int outputFormat = scanner.nextInt(); // the next input will represent the modified role
-                    String format;
-                    switch (outputFormat) { // lettercase matters little
-                        case 1: // if 1...
-                            format = "csv"; // then csv it is
-                            break;
-                        case 2: // if 2...
-                            format = "txt"; // then txt it is
-                            break;
-                        case 3:  // if 3...
-                            format = "console"; // then console it is
-                            break;
-                        default: // if you input nonsense...
-                            System.out.println("\nThat is not a valid format! Printing to console in the absence of better ideas.");
-                            format = "console";
-                    }
-                    generateLecturerReport(format);
-                    break;
-// TO CHANGE YOUR USERNAME AND PASSWORD
-                case 2: // if you input 2...
-                    int activeLecturerID = lecturer.getUserID(); // note the active lecturer's ID
-                    User activeLecturer = userDatabase.getUser(activeLecturerID);
-                    System.out.println("---\nAcknowledged.\nInput 1 to modify your username.\nInput 2 to modify your password."); // choose which action
-                    System.out.println("---");
-                    int choiceCredentials = scanner.nextInt(); // granular choice of which credential to modify
-                    switch (choiceCredentials) {
-                        case 1: // if you input 1...
-                            System.out.println("---\nNow, please input the new username you would like to change over to.\n---");
-                            scanner.nextLine(); // clear input buffer
-                            String newUsername = scanner.nextLine(); // the next input will become your username
-                            if (userDatabase.usernameExists(newUsername)) { // unless it already exists...
-                                System.out.println("---\nImpossible! That username is already present in the database. Please choose another."); // in which case, your ears will burn
-                            } else {
-                                System.out.println("---\nSuperlative! Your username has been updated. Renewals within renewals.");
+                    case 1: // if you input 1...
+                        System.out.println("---\nAcknowledged. Now, choose your format.\nInput 1 to output the report in CSV format.\nInput 2 to output it in TXT format.\nInput 3 to print the output to the console.\n---");
+                        int outputFormat = scanner.nextInt(); // the next input will represent the modified role
+                        String format;
+                        switch (outputFormat) { // lettercase matters little
+                            case 1: // if 1...
+                                format = "csv"; // then csv it is
                                 break;
-                            }
-                            activeLecturer.setUsername(newUsername); // if all is well, update the username
-                            System.out.println("---\nYour username has been updated successfully.\n---");
-                            break;
-                        case 2: // if you input 2...
-                            System.out.println("---\nNow, please input your new password.\n---");
-                            scanner.nextLine(); // clear input buffer
-                            activeLecturer.setPassword(scanner.nextLine()); // the next input will become your password. Anything works
-                            System.out.println("---\nSplendid! Your password has been changed. Go forth and feel secure!");
-                            break;
-                        default: // if you input nonsense...
-                            System.out.println("---\nNonsense! That is not valid input. You must choose either your username (1), or password (2).");
-                    }
-                    userDatabase.updateUser(activeLecturer.getUserID(), activeLecturer); // finally, update the active lecturer
-                    break;
+                            case 2: // if 2...
+                                format = "txt"; // then txt it is
+                                break;
+                            case 3:  // if 3...
+                                format = "console"; // then console it is
+                                break;
+                            default: // if you input nonsense...
+                                System.out.println("\nThat is not a valid format! Printing to console in the absence of better ideas.");
+                                format = "console";
+                        }
+                        scanner.nextLine(); // clear it out first
+                        System.out.println("---\nIndubitably. For authentication purposes, please enter your lecturer security password.\nNote that I am not referring to your password HERE - the security passwords are assigned to each lecturer in the MySQL database.\n---");
+                        String password = scanner.nextLine(); // request the lecturer password
+                        generateLecturerReport(format, password); // generate a lecturer report
+                        break;
+// TO CHANGE YOUR USERNAME AND PASSWORD
+                    case 2: // if you input 2...
+                        int activeLecturerID = lecturer.getUserID(); // note the active lecturer's ID
+                        User activeLecturer = userDatabase.getUser(activeLecturerID);
+                        System.out.println("---\nAcknowledged.\nInput 1 to modify your username.\nInput 2 to modify your password."); // choose which action
+                        System.out.println("---");
+                        int choiceCredentials = scanner.nextInt(); // granular choice of which credential to modify
+                        scanner.nextLine(); // clear input buffer
+                        switch (choiceCredentials) {
+                            case 1: // if you input 1...
+                                System.out.println("---\nNow, please input the new username you would like to change over to.\n---");
+                                String newUsername = scanner.nextLine(); // the next input will become your username
+                                if (userDatabase.usernameExists(newUsername)) { // unless it already exists...
+                                    System.out.println("---\nImpossible! That username is already present in the database. Please choose another."); // in which case, your ears will burn
+                                } else {
+                                    System.out.println("---\nSuperlative! Your username has been updated. Renewals within renewals.");
+                                activeLecturer.setUsername(newUsername); // if all is well, update the username
+                                    break;
+                                }
+                            case 2: // if you input 2...
+                                System.out.println("---\nNow, please input your new password.\n---");
+                                activeLecturer.setPassword(scanner.nextLine()); // the next input will become your password. Anything works
+                                System.out.println("---\nSplendid! Your password has been changed. Go forth and feel secure!");
+                                break;
+                            default: // if you input nonsense...
+                                System.out.println("---\nNonsense! That is not valid input. You must choose either your username (1), or password (2).");
+                        }
+                        userDatabase.updateUser(activeLecturer.getUserID(), activeLecturer); // finally, update the active lecturer
+                        break;
 // TO LOG OUT
-                case 3: // if the user inputs 3...
-                    logout(); // ...run the logout method
-                    return;
+                    case 3: // if the user inputs 3...
+                        logout(); // ...run the logout method
+                        return;
 // TO CLOSE THE SOFTWARE
-                case 4: // if the user inputs 4...
-                    System.out.println("---\nFast times at Innistown College, eh? Enjoy your day, your week, your month, and your year. Byeeeeee!"); // ...bid them goodbye...            
+                    case 4: // if the user inputs 4...
+                        System.out.println("---\nFast times at Innistown College, eh? Enjoy your day, your week, your month, and your year. Byeeeeee!"); // ...bid them goodbye...
 // IN ANY OTHER EVENT...
-                default: // in the event of any other input...
-                    System.out.println("---\nThat is not valid input. Perhaps you would care to give that another try? I have all day.\n"); // give back some cheek
+                    default: // in the event of any other input...
+                        System.out.println("---\nThat is not valid input. Perhaps you would care to give that another try? I have all day."); // give back some cheek
+                }
+            } catch (InputMismatchException e) { // catch anything else
+                scanner.nextLine();
+                System.out.println("---\nThat is not valid input. Perhaps you would care to give that another try? I have all day.");
             }
         } while (true); // run in perpetuity, until input is found
     }
@@ -113,9 +118,11 @@ public class LecturerController implements UserController {
         controller.login(); // and return to the login screen
     }
 
-    private void generateLecturerReport(String format) {
-        LecturerReport lecturerReport = new LecturerReport(getFormatter(format)); // create a new Lecturer Report...
-        lecturerReport.generateReport(format); // and use the format to generate it
+    private void generateLecturerReport(String format, String password) {
+        String authType = "password"; // we are using passwords to verify the lecturers when they want their reports
+        String authInfo = password;
+        LecturerReport lecturerReport = new LecturerReport(getFormatter(format));
+        lecturerReport.generateReport(format, authType, authInfo); // send the input to the generator
     }
 
     private ReportFormatter getFormatter(String format) {

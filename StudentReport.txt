@@ -1,0 +1,2 @@
+Name	Student Number	Course Name	Modules Enrolled	Modules Completed	Modules To Repeat
+Adalyna Yemma	TN5XPS4F	Introduction to Astrophysics	Cosmology and Dark Matter, Galactic Dynamics, Solar System Exploration, Stellar Evolution	Cosmology and Dark Matter (Grade: 60), Galactic Dynamics (Grade: 47), Solar System Exploration (Grade: 40), Stellar Evolution (Grade: 41)	None

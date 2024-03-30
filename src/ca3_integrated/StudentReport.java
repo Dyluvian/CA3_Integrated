@@ -43,7 +43,7 @@ public class StudentReport {
                 ResultSet checkResult = statement.executeQuery(checkStudentQuery); // check the results of the student ID column
 
                 if (!checkResult.next()) { // if there is nothing in that first resultset...
-                    System.out.println("Drat, drat, and double drat! No student with the ID #" + studentID + " was locatable in the database."); // print an error
+                    System.out.println("---\nDrat, drat, and double drat! No student with the ID #" + studentID + " was locatable in the database."); // print an error
                     checkResult.close();
                     statement.close();
                     connection.close();
