@@ -42,6 +42,7 @@ public class OfficeController implements UserController { // import Scanner for 
 // TO GENERATE A REPORT
             case 1: // if you input 1...
             System.out.println("---\nAcknowledged. Now, select which type of report.\nInput 1 to generate a Course Report.\nInput 2 to generate a Lecturer Report.\nInput 3 to generate a Student Report.\n---");
+                    scanner.nextLine(); // clear input buffer
                     String reportType = scanner.nextLine(); // next input will represent the report TYPE (Course, Lecturer etc) to output
             System.out.println("---\nUnderstood. Now, choose your format.\nInput 1 to output the report in CSV format.\nInput 2 to output it in TXT format.\nInput 3 to print the output to the console.\n---");
                     scanner.nextLine(); // clear input buffer

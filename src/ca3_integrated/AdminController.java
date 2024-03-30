@@ -55,9 +55,11 @@ public class AdminController implements UserController {
                         break;
                     }
                     System.out.println("---\nNow, please input the user's password.\n---"); // next, input your password
+                    scanner.nextLine(); // clear input buffer, no matter what
                     String password = scanner.nextLine(); // next input will become the password. Anything is valid
                     System.out.println("---\nFinally, please input the role of the new user. Currently, the valid options are Admin, Office, and Lecturer.\n---"); // finally, input the role
                     while (true) { // loop until we have valid input
+                    scanner.nextLine(); // clear input buffer because I am paranoid
                         String role = scanner.nextLine(); // next input will become the role
                         User newUser;
                         switch (role.toLowerCase()) { // lettercase is whatever
