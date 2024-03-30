@@ -48,16 +48,17 @@ public class AdminController implements UserController {
 // TO ADD NEW USERS
                 case 2: // if you input 2...
                     System.out.println("---\nPlease input the username of the user you wish to add.\n---"); // request a username
-                    String username = scanner.next(); // next input will become the username
+                    scanner.nextLine(); // clear input buffer
+                    String username = scanner.nextLine(); // next input will become the username
                     if (userDatabase.usernameExists(username)) { // ...unless that user already exists
                         System.out.println("---\nUnfortunately, a user by this name already exists! We can barely cope with one of you as it is. Please input a different name."); // and nag the user about it
                         break;
                     }
                     System.out.println("---\nNow, please input the user's password.\n---"); // next, input your password
-                    String password = scanner.next(); // next input will become the password. Anything is valid
+                    String password = scanner.nextLine(); // next input will become the password. Anything is valid
                     System.out.println("---\nFinally, please input the role of the new user. Currently, the valid options are Admin, Office, and Lecturer.\n---"); // finally, input the role
                     while (true) { // loop until we have valid input
-                        String role = scanner.next(); // next input will become the role
+                        String role = scanner.nextLine(); // next input will become the role
                         User newUser;
                         switch (role.toLowerCase()) { // lettercase is whatever
                             case "admin":
@@ -98,7 +99,8 @@ public class AdminController implements UserController {
                         switch (choiceCredentials) {
                             case 1: // if you input 1...
                                 System.out.println("---\nNow, please input the new username you wish to grant this user.\n---");
-                                String newUsername = scanner.next(); // the next input will become the new username
+                                scanner.nextLine(); // clear input buffer
+                                String newUsername = scanner.nextLine(); // the next input will become the new username
                                 if (userDatabase.usernameExists(newUsername)) { // but if someone by that name already exists...
                                     System.out.println("---\nUnfortunately, this username already exists in the database! Two heads are more than one! Please choose another one."); // you will get nowhere
                                     break;

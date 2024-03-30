@@ -42,10 +42,10 @@ public class OfficeController implements UserController { // import Scanner for 
 // TO GENERATE A REPORT
             case 1: // if you input 1...
             System.out.println("---\nAcknowledged. Now, select which type of report.\nInput 1 to generate a Course Report.\nInput 2 to generate a Lecturer Report.\nInput 3 to generate a Student Report.\n---");
-                    String reportType = scanner.next(); // next input will represent the report TYPE (Course, Lecturer etc) to output
-                    scanner.nextLine();
+                    String reportType = scanner.nextLine(); // next input will represent the report TYPE (Course, Lecturer etc) to output
             System.out.println("---\nUnderstood. Now, choose your format.\nInput 1 to output the report in CSV format.\nInput 2 to output it in TXT format.\nInput 3 to print the output to the console.\n---");
-                    String outputFormat = scanner.next(); // the next input will represent the format
+                    scanner.nextLine(); // clear input buffer
+                    String outputFormat = scanner.nextLine(); // the next input will represent the format
                     String format;
                     switch (outputFormat.toLowerCase()) { // lettercase matters little
                         case "csv": // if the user enters csv...
@@ -91,7 +91,8 @@ public class OfficeController implements UserController { // import Scanner for 
                     switch (choiceCredentials) {
                         case 1: // if you input 1...
                             System.out.println("---\nNow, please input the new username you would like to change over to.\n---");
-                            String newUsername = scanner.next(); // the next input will become your username
+                            scanner.nextLine(); // clear input buffer
+                            String newUsername = scanner.nextLine(); // the next input will become your username
                             if (userDatabase.usernameExists(newUsername)) { // unless it already exists...
                                 System.out.println("---\nImpossible! That username is already present in the database. Please choose another."); // in which case, your ears will burn
                             } else {
@@ -100,7 +101,8 @@ public class OfficeController implements UserController { // import Scanner for 
                             }
                         case 2: // if you input 2...
                             System.out.println("---\nNow, please input your new password.\n---");
-                            activeOffice.setPassword(scanner.next()); // the next input will become your password. Anything works
+                            scanner.nextLine(); // clear input buffer
+                            activeOffice.setPassword(scanner.nextLine()); // the next input will become your password. Anything works
                             System.out.println("---\nSplendid! Your password has been changed. Go forth and feel secure!");
                             break;
                         default:

@@ -43,7 +43,8 @@ public class LecturerController implements UserController {
 // TO GENERATE A LECTURER REPORT
                 case 1: // if you input 1...
                     System.out.println("---\nAcknowledged. Now, choose your format.\nInput 1 to output the report in CSV format.\nInput 2 to output it in TXT format.\nInput 3 to print the output to the console.\n---");
-                    String outputFormat = scanner.next(); // the next input will represent the modified role
+                    scanner.nextLine(); // clear input buffer
+                    String outputFormat = scanner.nextLine(); // the next input will represent the modified role
                     String format;
                     switch (outputFormat.toLowerCase()) { // lettercase matters little
                         case "csv": // if the user enters csv...
@@ -74,7 +75,8 @@ public class LecturerController implements UserController {
                     switch (choiceCredentials) {
                         case 1: // if you input 1...
                             System.out.println("---\nNow, please input the new username you would like to change over to.\n---");
-                            String newUsername = scanner.next(); // the next input will become your username
+                            scanner.nextLine(); // clear input buffer
+                            String newUsername = scanner.nextLine(); // the next input will become your username
                             if (userDatabase.usernameExists(newUsername)) { // unless it already exists...
                                 System.out.println("---\nImpossible! That username is already present in the database. Please choose another."); // in which case, your ears will burn
                             } else {
@@ -86,7 +88,8 @@ public class LecturerController implements UserController {
                             break;
                         case 2: // if you input 2...
                             System.out.println("---\nNow, please input your new password.\n---");
-                            activeLecturer.setPassword(scanner.next()); // the next input will become your password. Anything works
+                            scanner.nextLine(); // clear input buffer
+                            activeLecturer.setPassword(scanner.nextLine()); // the next input will become your password. Anything works
                             System.out.println("---\nSplendid! Your password has been changed. Go forth and feel secure!");
                             break;
                         default: // if you input nonsense...
