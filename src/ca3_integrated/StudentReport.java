@@ -9,7 +9,7 @@ package ca3_integrated;
 // ------------------
 // The Student Report is one of the three *current* varieties of report, with scope to hopefully add more.
 // ------------------
-*/
+ */
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -28,44 +28,44 @@ public class StudentReport {
     public StudentReport(ReportFormatter reportFormatter) {
         this.reportFormatter = reportFormatter;
     }
-    
+
     public void generateReport(String format) {
         try {
             Connection connection = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD); // connect to the database
             Statement statement = connection.createStatement();
 
-String studentReportQuery = "SELECT " +
-        "CONCAT(s.first_name, ' ', s.last_name) AS Full_Name, " +
-        "s.student_number AS Student_Number, " +
-        "c.course_name AS Course_Name, " +
-        "GROUP_CONCAT(DISTINCT m.module_name) AS Modules_Enrolled, " +
-        "COALESCE(m_completed.Modules_Completed, 'None') AS Modules_Completed, " +
-        "GROUP_CONCAT(DISTINCT m_repeat.module_name) AS Modules_To_Repeat " +
-    "FROM " +
-        "students s " +
-    "JOIN " +
-        "courses c ON s.course_id = c.course_id " +
-    "LEFT JOIN " +
-        "enrollments e ON s.student_id = e.student_id " +
-    "LEFT JOIN " +
-        "modules m ON e.module_id = m.module_id " +
-    "LEFT JOIN " +
-        "grades g ON e.enrollment_id = g.enrollment_id " +
-    "LEFT JOIN " +
-        "(SELECT e.student_id, GROUP_CONCAT(DISTINCT CONCAT(m.module_name, ' (Grade: ', g.grade, ')')) AS Modules_Completed " +
-         " FROM enrollments e " +
-         " JOIN modules m ON e.module_id = m.module_id " +
-         " JOIN grades g ON e.enrollment_id = g.enrollment_id " +
-         " WHERE e.status = 'Completed' " +
-         " GROUP BY e.student_id) m_completed ON s.student_id = m_completed.student_id " +
-    "LEFT JOIN " +
-        "(SELECT e.student_id, m.module_name " +
-         " FROM enrollments e " +
-         " JOIN modules m ON e.module_id = m.module_id " +
-         " WHERE e.status = 'Needs to repeat') m_repeat ON s.student_id = m_repeat.student_id " +
-    "GROUP BY " +
-        "s.student_id";
-    
+            String studentReportQuery = "SELECT " // this query is a bit disgusting but I think it works
+                    + "CONCAT(s.first_name, ' ', s.last_name) AS Name, " // concatenate the first and last names of the student into one name
+                    + "s.student_number AS Student_Number, " // retrieve the student number of the students
+                    + "c.course_name AS Course_Name, " // and the course name of the courses
+                    + "GROUP_CONCAT(DISTINCT m.module_name) AS Modules_Enrolled, " // concatenate the names of modules the student is enrolled in
+                    + "COALESCE(m_completed.Modules_Completed, 'None') AS Modules_Completed, " // retrieve the completed modules of the student
+                    + "GROUP_CONCAT(DISTINCT m_repeat.module_name) AS Modules_To_Repeat " // concatenate the names of those modules into one
+                    + "FROM "
+                    + "students s " // select students
+                    + "JOIN "
+                    + "courses c ON s.course_id = c.course_id " // join courses via IDs
+                    + "LEFT JOIN "
+                    + "enrollments e ON s.student_id = e.student_id " // left join enrollments, using student IDs
+                    + "LEFT JOIN "
+                    + "modules m ON e.module_id = m.module_id " // left join modules, using module IDs
+                    + "LEFT JOIN "
+                    + "grades g ON e.enrollment_id = g.enrollment_id " // left join grades, using enrollment IDs
+                    + "LEFT JOIN "
+                    + "(SELECT e.student_id, GROUP_CONCAT(DISTINCT CONCAT(m.module_name, ' (Grade: ', g.grade, ')')) AS Modules_Completed " // obtain the completed modules
+                    + " FROM enrollments e "
+                    + " JOIN modules m ON e.module_id = m.module_id "
+                    + " JOIN grades g ON e.enrollment_id = g.enrollment_id "
+                    + " WHERE e.status = 'Completed' "
+                    + " GROUP BY e.student_id) m_completed ON s.student_id = m_completed.student_id "
+                    + "LEFT JOIN "
+                    + "(SELECT e.student_id, m.module_name " // obtain the modules to complete
+                    + " FROM enrollments e "
+                    + " JOIN modules m ON e.module_id = m.module_id "
+                    + " WHERE e.status = 'Needs to repeat') m_repeat ON s.student_id = m_repeat.student_id "
+                    + "GROUP BY "
+                    + "s.student_id"; // and group all by the student ID
+
             ResultSet resultSet = statement.executeQuery(studentReportQuery); // run the above MySQL query
 
             String fileName = "StudentReport"; // name the output

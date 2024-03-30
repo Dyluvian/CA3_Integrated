@@ -35,19 +35,19 @@ public class LecturerReport {
             Statement statement = connection.createStatement();
             
             String lecturerReportQuery = "SELECT " +
-                            "CONCAT(l.first_name, ' ', l.last_name) AS Lecturer_Name, " +
-                            "l.role AS Lecturer_Role, " +
-                            "GROUP_CONCAT(DISTINCT m.module_name) AS Modules_Taught, " +
-                            "COUNT(DISTINCT e.student_id) AS Number_of_Students, " +
-                            "l.types_of_classes AS Types_of_Classes_Taught " +
+                            "CONCAT(l.first_name, ' ', l.last_name) AS Name, " + // concatenate first name and last name into one name
+                            "l.role AS Lecturer_Role, " + // select role
+                            "GROUP_CONCAT(DISTINCT m.module_name) AS Modules_Taught, " + // concatenate module names of that lecturer
+                            "COUNT(DISTINCT e.student_id) AS Number_of_Students, " + // obtain the number of students they teach. This will probably display as 10 for everyone because each has 10 students in my database construction, but I understand the query is what matters here, not the data
+                            "l.types_of_classes AS Types_of_Classes_Taught " + // select the types of classes column of the lecturer
                         "FROM " +
-                            "lecturers l " +
+                            "lecturers l " + // from lecturers table
                         "JOIN " +
-                            "modules m ON l.lecturer_id = m.lecturer_id " +
+                            "modules m ON l.lecturer_id = m.lecturer_id " + // join the modules table, referring to lecturer IDs
                         "LEFT JOIN " +
-                            "enrollments e ON m.module_id = e.module_id " +
+                            "enrollments e ON m.module_id = e.module_id " + // and left join the enrollments table, based on module IDs
                         "GROUP BY " +
-                            "l.lecturer_id";
+                            "l.lecturer_id"; // use lecturer ID to group the results
 
             ResultSet resultSet = statement.executeQuery(lecturerReportQuery); // run the above MySQL query
 

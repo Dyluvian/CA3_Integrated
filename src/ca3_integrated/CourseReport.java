@@ -35,23 +35,23 @@ public class CourseReport {
             Statement statement = connection.createStatement();
 
             String courseReportQuery = "SELECT "
-                    + "m.module_name AS Module_Name, "
-                    + "c.course_name AS Course_Name, "
-                    + "COUNT(DISTINCT e.student_id) AS Number_of_Students_Enrolled, "
-                    + "CONCAT(l.first_name, ' ', l.last_name) AS Lecturer_Name, "
-                    + "m.room AS Room_Assigned "
+                    + "m.module_name AS Module_Name, " // select the module name
+                    + "c.course_name AS Course_Name, " // select the course name
+                    + "COUNT(DISTINCT e.student_id) AS Number_of_Students_Enrolled, " // count students enrolled
+                    + "CONCAT(l.first_name, ' ', l.last_name) AS Lecturer_Name, " // concatenate first and last names of lecturer
+                    + "m.room AS Room_Assigned " // use room field in modules
                     + "FROM "
-                    + "modules m "
+                    + "modules m " // select modules
                     + "JOIN "
-                    + "courses c ON m.course_id = c.course_id "
+                    + "courses c ON m.course_id = c.course_id " // join courses based on course ID
                     + "JOIN "
-                    + "enrollments e ON m.module_id = e.module_id "
+                    + "enrollments e ON m.module_id = e.module_id " // join enrollments based on module ID
                     + "JOIN "
-                    + "lecturers l ON m.lecturer_id = l.lecturer_id "
+                    + "lecturers l ON m.lecturer_id = l.lecturer_id " // join lecturers based on lecturer ID
                     + "GROUP BY "
-                    + "m.module_id "
+                    + "m.module_id " // group all by module ID
                     + "ORDER BY "
-                    + "Module_Name";
+                    + "Module_Name"; // and arrange by module name
 
             ResultSet resultSet = statement.executeQuery(courseReportQuery); // run the above MySQL query
 
