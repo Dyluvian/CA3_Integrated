@@ -68,10 +68,12 @@ public class OfficeController implements UserController { // import Scanner for 
                             generateLecturerReport(format); // generate a lecturer report
                             break;
                         case 3: // or 3...
-                            generateStudentReport(format); // generate a student report
+                            System.out.println("---\nIndubitably. Please enter the student ID of the student in question:\n---");
+                            int studentID = scanner.nextInt(); // request the student ID
+                            generateStudentReport(format, studentID); // generate a student report
                             break;
                         default: // if you input nonsense...
-                            System.out.println("\nThat does not correspond to a valid report type!");
+                            System.out.println("---\nThat does not correspond to a valid report type!");
                     }
                     break;
 // TO CHANGE YOUR USERNAME AND PASSWORD
@@ -133,9 +135,9 @@ public class OfficeController implements UserController { // import Scanner for 
         lecturerReport.generateReport(format); // and use the format to generate it
     }
 
-    private void generateStudentReport(String format) {
+    private void generateStudentReport(String format, int studentID) {
         StudentReport studentReport = new StudentReport(getFormatter(format)); // create a new Student Report...
-        studentReport.generateReport(format); // and use the format to generate it
+        studentReport.generateReport(format, studentID); // and use the format and student ID to generate it
     }
 
     private ReportFormatter getFormatter(String format) {
