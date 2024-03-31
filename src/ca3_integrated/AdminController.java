@@ -137,7 +137,7 @@ public class AdminController implements UserController {
                                         newUsername = scanner.nextLine(); // the next input will become the new username
                                         if (!newUsername.isEmpty()) { // Check if the input is not empty
                                             if (userDatabase.usernameExists(newUsername)) { // but if someone by that name already exists...
-                                                System.out.println("---\nUnfortunately, this username already exists in the database! Two heads are more than one! Please choose another one."); // you will get nowhere
+                                                System.out.println("---\nUnfortunately, this username already exists in the database! Two heads are more than one! Please choose another one.\n---"); // you will get nowhere
                                             } else {
                                                 break;
                                             }
@@ -236,9 +236,11 @@ public class AdminController implements UserController {
                     default: // if you input nonsense...
                         System.out.println("---\nThat is not valid input. Perhaps you would care to give that another try? I have all day."); // you will get nonsense back
                 }
+            } catch (NumberFormatException e) {
+                System.out.println("---\nThat is not valid input. Perhaps you would care to give that another try? I have all day.\n---");
             } catch (InputMismatchException e) { // catch anything else
                 scanner.nextLine();
-                System.out.println("---\nThat is not valid input. Perhaps you would care to give that another try? I have all day.");
+                System.out.println("---\nThat is not valid input. Perhaps you would care to give that another try? I have all day.\n---");
             }
         } while (true); // run in perpetuity, until input is found
     }

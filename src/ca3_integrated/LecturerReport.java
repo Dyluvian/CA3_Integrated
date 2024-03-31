@@ -15,6 +15,8 @@ package ca3_integrated;
 // This is all based on the distinction between the requests for "The name of EVERY module" for Course Report and "The name of THE lecturer" for this one.
 // That's defensible to me based on the requirements, but if you'd like to see it print every lecturer's data at once, previous iterations of this file on GitHub showcase that.
 // Hope it makes sense.
+// Also, there is a simple semester check.
+// PLEASE NOTE that half of the lecturers are not active this semester (maybe not very realistic); only half of them have students and classes! Try with multiple.
 // ------------------
  */
 
@@ -42,43 +44,41 @@ public class LecturerReport {
             String authenticationQuery;
             String lecturerReportQuery;
 
-            if ("lecturerID".equalsIgnoreCase(authType)) { // variation for Office users, reliant on IDs
+            if ("lecturerID".equalsIgnoreCase(authType)) { // Variation for Office users, reliant on IDs
                 authenticationQuery = "SELECT * FROM lecturers WHERE lecturer_id = ?";
                 lecturerReportQuery = "SELECT "
-                        + "CONCAT(l.first_name, ' ', l.last_name) AS Name, " // concatenate first name and last name into one name
+                        + "CONCAT(l.first_name, ' ', l.last_name) AS Name, " // Concatenate first name and last name into one name
                         + "l.role AS Lecturer_Role, "
-                        + "GROUP_CONCAT(DISTINCT m.module_name) AS Modules_Taught, " // concatenate module names of that lecturer
-                        + "COUNT(DISTINCT e.student_id) AS Number_of_Students, " // obtain the number of students they teach. PLEASE NOTE !!!!!!!: This will probably display as 10 for everyone because each has 10 students in my database construction, but the query itself should be fine and I understand that is what matters
-                        + "GROUP_CONCAT(DISTINCT c.type) AS Types_of_Classes_Taught " // select the type column from courses and link it to the lecturer
+                        + "GROUP_CONCAT(DISTINCT m.module_name) AS Modules_Taught_This_Semester, " // Concatenate module names of that lecturer
+                        + "COUNT(DISTINCT e.student_id) AS Number_of_Students, " // Obtain the number of students they teach
+                        + "l.types_of_classes AS Types_of_Classes_Taught " // Select the types_of_classes column from lecturers table
                         + "FROM "
-                        + "lecturers l " // from lecturers table
-                        + "JOIN "
-                        + "modules m ON l.lecturer_id = m.lecturer_id " // join the modules table, referring to lecturer IDs
-                        + "JOIN "
-                        + "courses c ON m.course_id = c.course_id " // join the courses table, referring to course IDs
+                        + "lecturers l " // From lecturers table
                         + "LEFT JOIN "
-                        + "enrollments e ON m.module_id = e.module_id " // and left join the enrollments table, based on module IDs
-                        + "WHERE l.lecturer_id = ?"; // use lecturer ID to group the results
-
-            } else if ("password".equalsIgnoreCase(authType)) { // secondary variation for Lecturers themselves, reliant on passwords
+                        + "modules m ON l.lecturer_id = m.lecturer_id AND m.current_semester = true " // Left join the modules table and include semester check
+                        + "LEFT JOIN "
+                        + "courses c ON m.course_id = c.course_id " // Left join the courses table, referring to course IDs
+                        + "LEFT JOIN "
+                        + "enrollments e ON m.module_id = e.module_id " // Left join the enrollments table, based on module IDs
+                        + "WHERE l.lecturer_id = ?";
+            } else if ("password".equalsIgnoreCase(authType)) { // Secondary variation for Lecturers themselves, reliant on passwords
                 authenticationQuery = "SELECT * FROM lecturers WHERE password = ?";
                 lecturerReportQuery = "SELECT "
                         + "CONCAT(l.first_name, ' ', l.last_name) AS Name, "
                         + "l.role AS Lecturer_Role, "
-                        + "GROUP_CONCAT(DISTINCT m.module_name) AS Modules_Taught, "
+                        + "GROUP_CONCAT(DISTINCT m.module_name) AS Modules_Taught_This_Semester, "
                         + "COUNT(DISTINCT e.student_id) AS Number_of_Students, "
-                        + "GROUP_CONCAT(DISTINCT c.type) AS Types_of_Classes_Taught "
+                        + "l.types_of_classes AS Types_of_Classes_Taught " // Select the types_of_classes column from lecturers table
                         + "FROM "
                         + "lecturers l "
-                        + "JOIN "
-                        + "modules m ON l.lecturer_id = m.lecturer_id "
-                        + "JOIN "
-                        + "courses c ON m.course_id = c.course_id "
                         + "LEFT JOIN "
-                        + "enrollments e ON m.module_id = e.module_id "
+                        + "modules m ON l.lecturer_id = m.lecturer_id AND m.current_semester = true " // Left join the modules table and include semester check
+                        + "LEFT JOIN "
+                        + "courses c ON m.course_id = c.course_id " // Left join the courses table, referring to course IDs
+                        + "LEFT JOIN "
+                        + "enrollments e ON m.module_id = e.module_id " // Left join the enrollments table, based on module IDs
                         + "WHERE l.password = ? "
-                        + "GROUP BY l.first_name, l.last_name, l.role"; // group only by lecturer details without lecturer_id
-
+                        + "GROUP BY l.first_name, l.last_name, l.role"; // Group only by lecturer details without lecturer_id
             } else {
                 System.out.println("---\nSomething has gone wrong with the authentication process.");
                 return;

@@ -143,6 +143,8 @@ public class LecturerController implements UserController {
                     default: // in the event of any other input...
                         System.out.println("---\nThat is not valid input. Perhaps you would care to give that another try? I have all day."); // give back some cheek
                 }
+            } catch (NumberFormatException e) {
+                System.out.println("---\nThat is not valid input. Perhaps you would care to give that another try? I have all day.\n---");
             } catch (InputMismatchException e) { // catch anything else
                 scanner.nextLine();
                 System.out.println("---\nThat is not valid input. Perhaps you would care to give that another try? I have all day.");
