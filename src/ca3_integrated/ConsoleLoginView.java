@@ -25,15 +25,29 @@ public class ConsoleLoginView implements LoginView {
     public void displayLoginPrompt() {
         System.out.println("---\nTo log in and perform operations, please begin by inputting your username.\n---"); // Does nothing but display a login text prompt.
     }
-    
+
     @Override
     public String getUserInput() {
-        return scanner.nextLine(); // Take whatever the user enters as their username input.
+        while (true) {
+            String userInput = scanner.nextLine(); // Take whatever the user enters as their username input.
+            if (!userInput.isEmpty()) { // as long as it's not empty
+                return userInput;
+            } else {
+                System.out.println("---\nThat is not valid username input. Perhaps you would care to give that another try? I have all day.\n---"); // if it is, complain
+            }
+        }
     }
-    
+
     @Override
     public String getPasswordInput() {
         System.out.print("---\nNow, please input your password.\n---\n"); // Ask for the user's password...
-        return scanner.nextLine(); // ...and take whatever they next enter
+        while (true) {
+            String passwordInput = scanner.nextLine(); // ...and take whatever they next enter
+            if (!passwordInput.isEmpty()) { // as long as it's not empty
+                return passwordInput;
+            } else {
+                System.out.println("---\nThat is not valid password input. Perhaps you would care to give that another try? I have all day.\n---"); // if it is, complain
+            }
+        }
     }
 }

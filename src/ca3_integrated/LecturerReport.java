@@ -88,7 +88,7 @@ public class LecturerReport {
                 authStatement.setString(1, authInfo);
                 ResultSet authenticationResult = authStatement.executeQuery();
                 if (!authenticationResult.next()) {
-                    System.out.println("---\nUnfortunately, that lecturer could not be authenticated.\n---");
+                    System.out.println("---\nUnfortunately, that lecturer could not be authenticated.");
                     return;
                 }
             }

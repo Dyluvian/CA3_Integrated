@@ -11,7 +11,6 @@ package ca3_integrated;
 // Specifically, it enables the Admin to view all users, add new users, modify the parameters of users, delete users, log out, and close the program.
 // ------------------
  */
-
 import java.util.InputMismatchException;
 import java.util.Scanner; // import Scanner for accepting user input
 
@@ -40,7 +39,12 @@ public class AdminController implements UserController {
         do {
             try {
                 System.out.println("---\nInput 1 to view current users.\nInput 2 to add new users.\nInput 3 to modify the usernames, passwords, and roles of other users.\nInput 4 to delete users.\nInput 5 to log out.\nInput 6 to close the software.\n---"); // instructions
-                choice = scanner.nextInt(); // next int inserted defines your choice
+                String choiceInput = scanner.nextLine().trim();
+                if (choiceInput.isEmpty()) {
+                    System.out.println("---\nThat is not valid input. Perhaps you would care to give that another try? I have all day.");
+                    continue;
+                }
+                choice = Integer.parseInt(choiceInput);
                 switch (choice) {
 // TO VIEW CURRENT USERS
                     case 1: // if you input 1...
@@ -50,14 +54,21 @@ public class AdminController implements UserController {
 // TO ADD NEW USERS
                     case 2: // if you input 2...
                         System.out.println("---\nPlease input the username of the user you wish to add.\n---"); // request a username
-                        scanner.nextLine(); // clear input buffer
-                        String username = scanner.nextLine(); // next input will become the username
+                        String username = scanner.nextLine().trim(); // next input will become the username
+                        if (username.isEmpty()) {
+                            System.out.println("---\nNo username, no dice.");
+                            break;
+                        }
                         if (userDatabase.usernameExists(username)) { // ...unless that user already exists
                             System.out.println("---\nUnfortunately, a user by this name already exists! We can barely cope with one of you as it is. Please input a different name."); // and nag the user about it
                             break;
                         }
                         System.out.println("---\nNow, please input the user's password.\n---"); // next, input your password
-                        String password = scanner.nextLine(); // next input will become the password. Anything is valid
+                        String password = scanner.nextLine().trim(); // next input will become the password. Anything is valid
+                        if (password.isEmpty()) {
+                            System.out.println("---\nNo password, no point.");
+                            break;
+                        }
                         System.out.println("---\nFinally, please input the role of the new user. Currently, the valid options are Admin, Office, and Lecturer.\n---"); // finally, input the role
                         while (true) { // loop until we have valid input
                             String role = scanner.nextLine(); // next input will become the role
@@ -87,8 +98,15 @@ public class AdminController implements UserController {
 // TO MODIFY THE USERNAMES, PASSWORDS, AND ROLES OF OTHER USERS
                     case 3: // if you input 3...
                         System.out.println("---\nPlease enter the ID of the user whose credentials you wish to modify.\n---"); // you will be asked for a user ID. This is an identifier for the user to modify
-                        int userID = scanner.nextInt(); // the next int inserted will represent a user
-    scanner.nextLine(); // clear input buffer
+                        int userID;
+                        while (true) {
+                            try {
+                                userID = Integer.parseInt(scanner.nextLine()); // the next int inserted will represent a user
+                                break; //
+                            } catch (NumberFormatException e) {
+                                System.out.println("---\nThat is not valid input. Please enter a user ID.\n---"); // if not valid, complain
+                            }
+                        }
                         User user = userDatabase.getUser(userID); // link the int/ID to the user
                         if (user == null) { // if you didn't use anyone's ID...
                             System.out.println("---\nUnfortunately, no such user has been located! Alas, not even down the back of the sofa."); // complaints come in
@@ -98,29 +116,57 @@ public class AdminController implements UserController {
                                 break;
                             }
                             System.out.println("---\nAcknowledged.\nInput 1 to modify their username.\nInput 2 to modify their password.\nInput 3 to modify their role.\n---");
-                            int choiceCredentials = scanner.nextInt(); // the next int will decide WHAT to modify
-                            scanner.nextLine(); // clear input buffer
+                            int choiceCredentials;
+                            while (true) {
+                                try {
+                                    choiceCredentials = Integer.parseInt(scanner.nextLine()); // choice must be an integer
+                                    if (choiceCredentials >= 1 && choiceCredentials <= 3) { // between 1 and 3
+                                        break;
+                                    } else { // if not...
+                                        System.out.println("---\nThat is not valid input. Perhaps you would care to give that another try? I have all day.\n---"); // ...complain
+                                    }
+                                } catch (NumberFormatException e) {
+                                    System.out.println("---\nThat is not valid input. Perhaps you would care to give that another try? I have all day.\n---");
+                                }
+                            }
                             switch (choiceCredentials) {
                                 case 1: // if you input 1...
                                     System.out.println("---\nNow, please input the new username you wish to grant this user.\n---");
-                                    String newUsername = scanner.nextLine(); // the next input will become the new username
-                                    if (userDatabase.usernameExists(newUsername)) { // but if someone by that name already exists...
-                                        System.out.println("---\nUnfortunately, this username already exists in the database! Two heads are more than one! Please choose another one."); // you will get nowhere
-                                        break;
+                                    String newUsername;
+                                    while (true) {
+                                        newUsername = scanner.nextLine(); // the next input will become the new username
+                                        if (!newUsername.isEmpty()) { // Check if the input is not empty
+                                            if (userDatabase.usernameExists(newUsername)) { // but if someone by that name already exists...
+                                                System.out.println("---\nUnfortunately, this username already exists in the database! Two heads are more than one! Please choose another one."); // you will get nowhere
+                                            } else {
+                                                break;
+                                            }
+                                        } else {
+                                            System.out.println("---\nThat is not valid input. Please enter their new username.\n---"); // inputting nothing is invalid
+                                        }
                                     }
                                     user.setUsername(newUsername); // otherwise, set that username for them
                                     System.out.println("---\nTerrific! Their username has been updated. A change is as good as a rest.");
                                     break;
                                 case 2: // if you input 2...
                                     System.out.println("---\nNow, please input the user's new password.\n---");
-                                    user.setPassword(scanner.next()); // the next input will become their password. Any input is valid
+                                    String newPassword;
+                                    while (true) {
+                                        newPassword = scanner.nextLine(); // the next input will become their password. Any input is valid
+                                        if (!newPassword.isEmpty()) { // unless the input is empty...
+                                            break;
+                                        } else {
+                                            System.out.println("---\nThat is not valid input. Please enter their new password.\n---"); // if so, complain
+                                        }
+                                    }
+                                    user.setPassword(newPassword);
                                     System.out.println("---\nFantastic! Their password has been changed. Play nice with this information!");
                                     break;
                                 case 3: // if you input 3...
                                     boolean validRole = false; // we're going to keep checking for a valid role
                                     System.out.println("---\nNow, please input the role of the new user. You may choose Admin, Office, or Lecturer.\n---");
                                     while (!validRole) { // while NO valid role has been input...
-                                        String newRole = scanner.next(); // the next input will represent the modified role
+                                        String newRole = scanner.nextLine(); // the next input will represent the modified role
                                         switch (newRole.toLowerCase()) { // lettercase matters little
                                             case "admin":
                                             case "1":
@@ -154,7 +200,20 @@ public class AdminController implements UserController {
 // TO DELETE USERS
                     case 4: // if you input 4...
                         System.out.println("---\nPlease input the user ID of the user you wish to delete.\n---"); // give us the user ID of the individual. This is why IDs are made available to Admins
-                        int deleteUserID = scanner.nextInt(); // the next int will represent the user to be deleted
+                        int deleteUserID;
+                        while (true) {
+                            String deleteInput = scanner.nextLine(); // Read the next line of input
+                            if (!deleteInput.isEmpty()) { // Check if the input is not empty
+                                try {
+                                    deleteUserID = Integer.parseInt(deleteInput); // Try parsing the input as an integer
+                                    break; // Exit the loop if input is valid
+                                } catch (NumberFormatException e) {
+                                    System.out.println("---\nThat is not valid input. Please enter a user ID.\n---"); // Prompt user for valid input
+                                }
+                            } else {
+                                System.out.println("---\nThat is not valid input. Please enter a user ID.\n---"); // Prompt user for valid input
+                            }
+                        }
                         User userToDelete = userDatabase.getUser(deleteUserID); // link the int/ID to the user
                         if (userToDelete == null) { // if you didn't manage to pinpoint anybody...
                             System.out.println("---\nImpossible! There is no such user. None where there's none wanted! Please choose an existing ID next time."); // you will be nagged

@@ -78,7 +78,7 @@ public class ConsoleReportFormatter implements ReportFormatter {
             }
             System.out.println();
 
-            System.out.println("---\nExcellent! The report has been printed to the console."); // ...we're done
+            System.out.println("---\nThe report has been printed to the console."); // ...we're done
         } catch (SQLException e) {
             e.printStackTrace();
         }
