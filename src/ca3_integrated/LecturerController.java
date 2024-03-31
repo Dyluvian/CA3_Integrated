@@ -76,7 +76,6 @@ public class LecturerController implements UserController {
                                 System.out.println("\nThat is not a valid format! Printing to console in the absence of better ideas.");
                                 format = "console";
                         }
-                        scanner.nextLine(); // clear it out first
                         System.out.println("---\nIndubitably. For authentication purposes, please enter your lecturer security password.\nNote that I am not referring to your password HERE - the security passwords are assigned to each lecturer in the MySQL database.\n---");
                         String password = scanner.nextLine(); // request the lecturer password
                         if (password.isEmpty()) {

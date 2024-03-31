@@ -44,6 +44,7 @@ public class LecturerReport {
             String authenticationQuery;
             String lecturerReportQuery;
 
+            // argh, I never want to look at this query again! Very last bit written at 2h before deadline. Kilroy was here and all that. Peace and love
             if ("lecturerID".equalsIgnoreCase(authType)) { // Variation for Office users, reliant on IDs
                 authenticationQuery = "SELECT * FROM lecturers WHERE lecturer_id = ?";
                 lecturerReportQuery = "SELECT "
@@ -68,7 +69,7 @@ public class LecturerReport {
                         + "l.role AS Lecturer_Role, "
                         + "GROUP_CONCAT(DISTINCT m.module_name) AS Modules_Taught_This_Semester, "
                         + "COUNT(DISTINCT e.student_id) AS Number_of_Students, "
-                        + "l.types_of_classes AS Types_of_Classes_Taught " // Select the types_of_classes column from lecturers table
+                        + "l.types_of_classes AS Types_of_Classes_Taught "
                         + "FROM "
                         + "lecturers l "
                         + "LEFT JOIN "
@@ -78,7 +79,7 @@ public class LecturerReport {
                         + "LEFT JOIN "
                         + "enrollments e ON m.module_id = e.module_id " // Left join the enrollments table, based on module IDs
                         + "WHERE l.password = ? "
-                        + "GROUP BY l.first_name, l.last_name, l.role"; // Group only by lecturer details without lecturer_id
+                        + "GROUP BY l.password, l.first_name, l.last_name, l.role, l.types_of_classes"; // Include types_of_classes in the GROUP BY clause
             } else {
                 System.out.println("---\nSomething has gone wrong with the authentication process.");
                 return;
